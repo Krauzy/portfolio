@@ -1,8 +1,10 @@
-# My Portfolio ⚡️ [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/Krauzy/portfolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/Krauzy/portfolio)](https://github.com/saadpasta/developerFolio/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/Krauzy/portfolio)](https://github.com/saadpasta/developerFolio/stargazers) [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/Krauzy/portfolio/blob/master/LICENSE) [![Visits Badge](https://badges.pufler.dev/visits/Krauzy/hackathon-2021)](https://github.com/Krauzy/hackathon-2021)
 
-## A clean, beautiful and responsive portfolio template for Developers!
+![example workflow](https://github.com/Krauzy/portfolio/actions/workflows/prettier.yml/badge.svg) 
 
+# My Portfolio ⚡️
 
+## Um portifólio limpo, completo e responsivo
 <p align="center">
   <kbd>
 <img src="https://user-images.githubusercontent.com/53429438/106779355-e9cd9e80-666c-11eb-9417-8a4b54441bc6.gif"></img>
