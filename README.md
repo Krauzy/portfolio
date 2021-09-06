@@ -7,7 +7,7 @@
 ## Um portifólio limpo, completo e responsivo
 <p align="center">
   <kbd>
-<img src="https://raw.githubusercontent.com/Krauzy/portfolio/main/static/demo.png"></img>
+<img width="450px" src="https://raw.githubusercontent.com/Krauzy/portfolio/main/static/demo.png"></img>
   </kbd>
 </p>
 
@@ -69,3 +69,6 @@ Exemplo ao vivo, **[clique aqui](https://krauzy-portfolio.vercel.app/)**.
 ## Ilustrações
 - [Lottie por Oblikweare](https://lottiefiles.com/oblikweare)
 
+## Template
+
+- [developerFolio](https://github.com/saadpasta/developerFolio)
