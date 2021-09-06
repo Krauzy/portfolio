@@ -29,15 +29,19 @@ const Main = () => {
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <style>{isDark ? "\
+      <style>
+        {isDark
+          ? "\
         ::-webkit-scrollbar-track {\
           background: #171c28;\
         }\
-      " : "\
+      "
+          : "\
         ::-webkit-scrollbar-track {\
           background: #fff;\
         }\
-      "}</style>
+      "}
+      </style>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         <Header />
         <Greeting />

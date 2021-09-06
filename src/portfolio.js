@@ -40,12 +40,13 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "O que eu faço",
-  subTitle: "SOU UM MEGA ENTUSIASTA QUE GOSTA DE ESTUDAR E ME ESPECIALIZAR EM MUITAS COISAS",
+  subTitle:
+    "SOU UM MEGA ENTUSIASTA QUE GOSTA DE ESTUDAR E ME ESPECIALIZAR EM MUITAS COISAS",
   skills: [
+    emoji("⚡ Desenvolvo projetos Full-Stack com frameworks diversas"),
     emoji(
-      "⚡ Desenvolvo projetos Full-Stack com frameworks diversas"
+      "⚡ Crio IAs para resolver problemas, facilitar e automatizar soluções"
     ),
-    emoji("⚡ Crio IAs para resolver problemas, facilitar e automatizar soluções"),
     emoji(
       "⚡ Integração com banco de dados, nuvem, e outros serviços terceirizados"
     )
@@ -171,12 +172,17 @@ const workExperiences = {
     {
       role: "Co-Fundador",
       company: "Virtual Fisio",
-      companylogo: "https://raw.githubusercontent.com/Krauzy/hackathon-2021/main/public/virtual_fisio.png",
+      companylogo:
+        "https://raw.githubusercontent.com/Krauzy/hackathon-2021/main/public/virtual_fisio.png",
       date: "Ago 2021 – Presente",
-      desc: emoji("Uma solução capaz de realizar o rastreamento de pontos de referência 📍, e micro-expressões 🧏‍♂️"),
+      desc: emoji(
+        "Uma solução capaz de realizar o rastreamento de pontos de referência 📍, e micro-expressões 🧏‍♂️"
+      ),
       descBullets: [
         "🦳 As expressões do usuário são capturadas para registrar possíveis incômodos durante os exercícios",
-        emoji("🦵 Os movimentos das articulações são detectadas, além de atributos como velocidade, esforço e evolução")
+        emoji(
+          "🦵 Os movimentos das articulações são detectadas, além de atributos como velocidade, esforço e evolução"
+        )
       ]
     },
     {
@@ -208,7 +214,8 @@ const bigProjects = {
   subtitle: "ALGUMAS STARTUPS E COMPANIAS QUE EU CRIEI E/OU PARTICIPO",
   projects: [
     {
-      image: "https://raw.githubusercontent.com/Krauzy/hackathon-2021/main/public/virtual_fisio.png",
+      image:
+        "https://raw.githubusercontent.com/Krauzy/hackathon-2021/main/public/virtual_fisio.png",
       projectName: "Virtual Fisio",
       projectDesc: "Envelhecer ficou no passado",
       footerLink: [
@@ -228,15 +235,15 @@ const bigProjects = {
 
 const achievementSection = {
   title: emoji("Conquistas e Certificados 🏆 "),
-  subtitle:
-    "Algumas coisa que eu consegui!",
+  subtitle: "Algumas coisa que eu consegui!",
 
   achievementsCards: [
     {
       title: "Segundo lugar no HACKATHON ERCAS 2021",
       subtitle:
         "Desenvolvido uma solução inovadora unindo conhecimentos das áreas de computação e saúde com o tema: monitoramento remoto do paciente.",
-      image: "https://sites.usp.br/sp-ercas2021/wp-content/uploads/sites/900/2021/02/logo_ercas-768x172.png",
+      image:
+        "https://sites.usp.br/sp-ercas2021/wp-content/uploads/sites/900/2021/02/logo_ercas-768x172.png",
       footerLink: [
         {
           name: "Certificado",
@@ -310,8 +317,7 @@ const podcastSection = {
 
 const contactInfo = {
   title: emoji("Contato ☎️"),
-  subtitle:
-    "Quer conversar sobre um projeto ou só dizer oi? Chega junto",
+  subtitle: "Quer conversar sobre um projeto ou só dizer oi? Chega junto",
   number: "+55 18 99725-0513",
   email_address: "caiomarin26@gmail.com"
 };
