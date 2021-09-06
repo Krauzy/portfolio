@@ -7,7 +7,7 @@
 ## Um portifólio limpo, completo e responsivo
 <p align="center">
   <kbd>
-<img src="https://raw.githubusercontent.com/Krauzy/portfolio/main/static/demo.gif"></img>
+<img src="https://raw.githubusercontent.com/Krauzy/portfolio/main/static/demo.png"></img>
   </kbd>
 </p>
 
