@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.41e95d67.chunk.css",
+    "main.js": "/static/js/main.b0e9cd74.chunk.js",
+    "main.js.map": "/static/js/main.b0e9cd74.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b21c652c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b21c652c.js.map",
+    "static/js/2.4bf148ab.chunk.js": "/static/js/2.4bf148ab.chunk.js",
+    "static/js/2.4bf148ab.chunk.js.map": "/static/js/2.4bf148ab.chunk.js.map",
+    "static/css/3.eb67db86.chunk.css": "/static/css/3.eb67db86.chunk.css",
+    "static/js/3.e9d09f9e.chunk.js": "/static/js/3.e9d09f9e.chunk.js",
+    "static/js/3.e9d09f9e.chunk.js.map": "/static/js/3.e9d09f9e.chunk.js.map",
+    "static/css/4.9f02c6ae.chunk.css": "/static/css/4.9f02c6ae.chunk.css",
+    "static/js/4.001d45ca.chunk.js": "/static/js/4.001d45ca.chunk.js",
+    "static/js/4.001d45ca.chunk.js.map": "/static/js/4.001d45ca.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0efa3ad734b5da204c1e3a8714cc0633.js": "/precache-manifest.0efa3ad734b5da204c1e3a8714cc0633.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/3.eb67db86.chunk.css.map": "/static/css/3.eb67db86.chunk.css.map",
+    "static/css/4.9f02c6ae.chunk.css.map": "/static/css/4.9f02c6ae.chunk.css.map",
+    "static/css/main.41e95d67.chunk.css.map": "/static/css/main.41e95d67.chunk.css.map",
+    "static/js/2.4bf148ab.chunk.js.LICENSE.txt": "/static/js/2.4bf148ab.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Montserrat-Regular.ee653992.ttf",
+    "static/media/contactMailDark.svg": "/static/media/contactMailDark.51cf7192.svg",
+    "static/media/developerActivity.svg": "/static/media/developerActivity.59389695.svg",
+    "static/media/logo_play.png": "/static/media/logo_play.d6a832ca.png",
+    "static/media/manOnTable.svg": "/static/media/manOnTable.52be3144.svg",
+    "static/media/skill.svg": "/static/media/skill.34409398.svg",
+    "static/media/TalkCard.scss": "/static/media/talksCardBack.13780cdd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b21c652c.js",
+    "static/js/2.4bf148ab.chunk.js",
+    "static/css/main.41e95d67.chunk.css",
+    "static/js/main.b0e9cd74.chunk.js"
+  ]
+}
