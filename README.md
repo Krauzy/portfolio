@@ -33,12 +33,6 @@ Exemplo ao vivo, **[clique aqui](https://krauzy-portfolio.vercel.app/)**.
   npm@6.9.0 or higher
   git@2.17.1 or higher
 ```
-### Docker
-
-```d
-1) BUILD IMAGE : docker build -t developerfolio:latest .
-2) RUN IMAGE: docker run -t -p 3000:3000 developerfolio:latest
-```
 
 ## Como usar 
 
