@@ -14,7 +14,7 @@ const greeting = {
   username: "Caio Kraut",
   title: "Olá, eu sou o Caio",
   subTitle: emoji(
-    "Um desenvolvedor Full-Stack entusiasta😎 na área da computação💻, focando atualmente em engenharia de IA🤖, Aprendizado de Máquina📈, Ciêncida de dados📊 e computação em nuvem☁️"
+    "Um desenvolvedor Full-Stack entusiasta😎 na área da computação💻, focando atualmente em engenharia de IA🤖, Aprendizado de Máquina📈, Ciência de dados📊 e computação em nuvem☁️"
   ),
   resumeLink: "https://github.com/Krauzy",
   displayGreeting: true // Set false to hide this section, defaults to true
