@@ -1,5 +1,4 @@
 [![GitHub stars](https://img.shields.io/github/stars/Krauzy/portfolio)](https://github.com/saadpasta/developerFolio/stargazers) [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/Krauzy/portfolio/blob/master/LICENSE) [![Visits Badge](https://badges.pufler.dev/visits/Krauzy/hackathon-2021)](https://github.com/Krauzy/hackathon-2021)
-
 ![example workflow](https://github.com/Krauzy/portfolio/actions/workflows/prettier.yml/badge.svg) ![example workflow](https://github.com/Krauzy/portfolio/actions/workflows/deploy.yml/badge.svg) 
 
 
