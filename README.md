@@ -4,7 +4,7 @@
 [![Visits Badge](https://badges.pufler.dev/visits/Krauzy/hackathon-2021)](https://github.com/Krauzy/hackathon-2021)
 [![GitHub](https://img.shields.io/github/license/Krauzy/portfolio)](https://github.com/Krauzy/portfolio/blob/master/LICENSE)
 [![CodeFactor](https://www.codefactor.io/repository/github/krauzy/portfolio/badge)](https://www.codefactor.io/repository/github/krauzy/portfolio)
-[![VERCEL](https://img.shields.io/static/v1?label=vercel&message=deployed&color=success&logo=vercel)](https://krauzy-portfolio.vercel.app)
+[![VERCEL](https://img.shields.io/static/v1?label=vercel&message=deployed&color=success&logo=vercel&labelColor=2c2c2c)](https://krauzy-portfolio.vercel.app)
   
 ![example workflow](https://github.com/Krauzy/portfolio/actions/workflows/prettier.yml/badge.svg) 
 ![example workflow](https://github.com/Krauzy/portfolio/actions/workflows/deploy.yml/badge.svg) 
