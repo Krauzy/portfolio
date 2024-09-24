@@ -194,7 +194,7 @@ export default function Home() {
           </FooterLocationContainer>
           <FooterSocialContainer>
             {localeData.footer.socialMedias.map(social => (
-              <FooterSocialLink customColor={social.color} href={social.link}>
+              <FooterSocialLink customColor={social.color} href={social.link} key={social.link}>
                 <FontAwesomeIcon icon={social.logo} />
               </FooterSocialLink>
             ))}
