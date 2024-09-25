@@ -519,7 +519,7 @@ export const RepoHeader = styled.div`
 
   @media screen and (max-width: 1100px) {
     font-size: .7em;
-    padding: .3em 0;
+    padding: 3.em 0;
     text-align: center;
     gap: .8em;
     width: 100%;
@@ -532,6 +532,7 @@ export const RepoTitle = styled.span`
   color: ${props => props.theme.color.secondary};
   font-weight: 700;
   font-size: 1.8em;
+  overflow-y: hidden;
 
   @media screen and (max-width: 1100px) {
     width: 70%;
@@ -644,10 +645,11 @@ export const FooterHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2em;
+  overflow-y: hidden;
 
   @media screen and (max-width: 1100px) {
     font-size: .6em;
-    overflow-y: hidden;
+    padding: .5em 0;
   }
 `;
 
@@ -656,6 +658,7 @@ export const FooterTitle = styled.span`
   font-family: ${props => props.theme.fonts.spaceMono};
   font-weight: 800;
   color: ${props => props.theme.color.secondary};
+  overflow-y: hidden;
 
   @media screen and (max-width: 1100px) {
     width: 80%;
