@@ -8,6 +8,11 @@ export const HomeWelcomeContainer = styled.div`
   margin-top: 10em;
   padding: 0 2em;
   margin-bottom: 8em;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 5em;
+  }
 `;
 
 export const MessageWelcomeContainer = styled.div`
@@ -15,6 +20,11 @@ export const MessageWelcomeContainer = styled.div`
   width: 60%;
   flex-direction: column;
   gap: 1.5em;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 export const GhostAssetContainer = styled.div`
@@ -22,6 +32,11 @@ export const GhostAssetContainer = styled.div`
   width: 40%;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 
 const randomTranslate = () => Math.floor(Math.random() * 21) - 10;
@@ -56,6 +71,10 @@ export const HelloContainer = styled(TooltipTrigger)`
   font-weight: 700;
   font-family: ${props => props.theme.fonts.spaceMono};
   width: fit-content;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 2em;
+  }
 `;
 
 export const HelloMessage = styled.span`
@@ -76,7 +95,16 @@ export const OpeningMessage = styled.p`
   span {
     color: ${props => props.theme.color.purple};
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.4em;
+  }
+
+  @media screen and (max-width: 1100px) {
+    font-size: 1em;
+    text-align: center;
+
+    span {
+      font-size: 1.1em;
+    }
   }
 `;
 
@@ -93,7 +121,14 @@ export const WarningMessage = styled.p`
   font-family: ${props => props.theme.fonts.spaceMono};
   font-weight: 700;
   padding-top: 2em;
+  font-size: 1em;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+  }
 `;
 
 export const IntroContainer = styled.div`
@@ -112,6 +147,12 @@ export const IntroHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2em;
+  overflow-y: hidden;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em !important;
+    padding: .3em 0;
+  }
 `;
 
 export const IntroTitle = styled.span`
@@ -127,7 +168,12 @@ export const IntroContent = styled.div`
   align-items: center;
   text-align: center;
   gap: 1.2em;
+  font-size: 1em;
   font-family: ${props => props.theme.fonts.spaceMono};
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+  }
 `;
 
 export const IntroDescription = styled.p`
@@ -142,12 +188,22 @@ export const DoneContainer = styled.div`
   align-items: center;
   margin-top: 8em;
   gap: 4em;
+
+  @media screen and (max-width: 1100px) {
+    margin-top: 5em;
+  }
 `;
 
 export const DoneHeader = styled.div`
   display: flex;
   gap: 1.2em;
   align-items: center;
+  overflow-y: hidden;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    padding: .3em 0;
+  }
 `;
 
 export const DoneTitle = styled.span`
@@ -164,6 +220,10 @@ export const TechContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 
 export const TechWidget = styled.div<{ customColor: string }>`
@@ -182,11 +242,19 @@ export const TechWidget = styled.div<{ customColor: string }>`
 
 export const TechIcon = styled(FontAwesomeIcon)`
   font-size: 2.5em;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 1.8em;
+  }
 `;
 
 export const TechDescription = styled.span`
   font-size: .8em;
   font-family: ${props => props.theme.fonts.spaceMono};
+
+  @media screen and (max-width: 1100px) {
+    font-size: .6em;
+  }
 `;
 
 export const SkillContainer = styled.div`
@@ -195,11 +263,18 @@ export const SkillContainer = styled.div`
   flex-direction: column;
   gap: 1.5em;
   margin-top: 2em;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    gap: 1.2em;
+    margin-top: 1.5em;
+  }
 `;
 
 export const SkillBarContainer = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
 `;
 
 export const SkillTitle = styled.span`
@@ -207,6 +282,11 @@ export const SkillTitle = styled.span`
   color: ${props => props.theme.color.secondary};
   font-weight: 600;
   font-family: ${props => props.theme.fonts.spaceMono};
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    width: 35%;
+  }
 `;
 
 const pickColor = (index: number, props: any) => {
@@ -230,6 +310,10 @@ const pickColor = (index: number, props: any) => {
 
 export const SkillBarBox = styled.div`
   width: 80%;
+
+  @media screen and (max-width: 1100px) {
+    width: 65%;
+  }
 `;
 
 export const SkillBar = styled.div<{ value: number, index: number }>`
@@ -237,6 +321,10 @@ export const SkillBar = styled.div<{ value: number, index: number }>`
   width: ${props => `${props.value}%`};
   height: 2em;
   border-radius: 6px;
+
+  @media screen and (max-width: 1100px) {
+    height: 1.5em;
+  }
 `;
 
 export const SkillWarningMessage = styled.small`
@@ -245,6 +333,12 @@ export const SkillWarningMessage = styled.small`
   color: ${props => props.theme.color.error};
   font-size: .8em;
   font-weight: 300;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    font-size: .6em;
+    font-weight: 200;
+  }
 `;
 
 export const ResumeContainer = styled.div`
@@ -262,6 +356,15 @@ export const ResumeHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2em;
+  overflow-y: hidden;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    padding: .3em 0;
+    gap: .8em;
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 export const ResumeTitle = styled.span`
@@ -269,6 +372,11 @@ export const ResumeTitle = styled.span`
   font-weight: 700;
   font-family: ${props => props.theme.fonts.spaceMono};
   color: ${props => props.theme.color.primary};
+
+  @media screen and (max-width: 1100px) {
+    width: 60%;
+    text-align: center;
+  }
 `;
 
 export const ResumeContent = styled.div`
@@ -281,10 +389,24 @@ export const ResumeContent = styled.div`
 export const ResumeSection = styled.div`
   display: flex;
   width: 80%;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
 `;
 
 export const ResumeLogoBox = styled.div`
   width: 10%;
+
+  @media screen and (max-width: 1100px) {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ResumeLogo = styled.img`
@@ -297,6 +419,11 @@ export const ResumeMainContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: .2em;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 export const ResumeJobTitle = styled.span`
@@ -304,12 +431,21 @@ export const ResumeJobTitle = styled.span`
   font-family: ${props => props.theme.fonts.spaceMono};
   font-size: 1.2em;
   color: ${props => props.theme.color.primary};
+
+  @media screen and (max-width: 1100px) {
+    font-weight: 600;
+    text-align: center;
+  }
 `;
 
 export const ResumeJobContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
+
+  @media screen and (max-width: 1100px) {
+    padding: 0 2em;
+  }
 `;
 
 export const ResumeJobContentSection = styled.div`
@@ -321,12 +457,24 @@ export const ResumeJobSubtitle = styled.span`
   font-weight: 800;
   font-family: ${props => props.theme.fonts.spaceMono};
   color: ${props => props.theme.color.primary};
+
+  @media screen and (max-width: 1100px) {
+    font-weight: 600;
+    font-size: .8em;
+    text-align: center;
+  }
 `;
 
 export const ResumeDate = styled.span`
   font-family: ${props => props.theme.fonts.spaceMono};
   font-weight: 500;
   color: ${props => props.theme.color.primary};
+
+  @media screen and (max-width: 1100px) {
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+  }
 `;
 
 export const ResumeDescriptionContainer = styled.div`
@@ -334,6 +482,11 @@ export const ResumeDescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: .5em;
+
+  @media screen and (max-width: 1100px) {
+    padding: 0;
+    margin-top: 1em;
+  }
 `;
 
 export const ResumeDescription = styled.p`
@@ -343,6 +496,11 @@ export const ResumeDescription = styled.p`
   font-size: .9em;
   font-weight: 200;
   text-align: justify;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    text-align: center;
+  }
 `;
 
 export const RepoContainer = styled.div`
@@ -350,13 +508,23 @@ export const RepoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 8em;
+  margin-top: 5em;
 `;
 
 export const RepoHeader = styled.div`
   display: flex;
   gap: 1.2em;
   align-items: center;
+  overflow-y: hidden;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .7em;
+    padding: .3em 0;
+    text-align: center;
+    gap: .8em;
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 export const RepoTitle = styled.span`
@@ -364,16 +532,28 @@ export const RepoTitle = styled.span`
   color: ${props => props.theme.color.secondary};
   font-weight: 700;
   font-size: 1.8em;
+
+  @media screen and (max-width: 1100px) {
+    width: 70%;
+  }
 `;
 
 export const RepoContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  width: 70%;  
   align-items: center;
   justify-content: center;
   gap: 3em;
   margin-top: 5em;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5em;
+    min-width: 10px;
+    margin-top: 3em;
+  }
 `;
 
 export const RepoWidget = styled.a<{ index: number }>`
@@ -385,6 +565,10 @@ export const RepoWidget = styled.a<{ index: number }>`
   display: flex;
   flex-direction: column;
   gap: .6em;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 
 export const RepoWidgetMark = styled(FontAwesomeIcon)`
@@ -449,12 +633,22 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   margin-top: 8em;
   border-radius: 1.2em;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    margin-top: 5em;
+  }
 `;
 
 export const FooterHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2em;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .6em;
+    overflow-y: hidden;
+  }
 `;
 
 export const FooterTitle = styled.span`
@@ -462,6 +656,10 @@ export const FooterTitle = styled.span`
   font-family: ${props => props.theme.fonts.spaceMono};
   font-weight: 800;
   color: ${props => props.theme.color.secondary};
+
+  @media screen and (max-width: 1100px) {
+    width: 80%;
+  }
 `;
 
 export const FooterSideRight = styled.div`
@@ -485,6 +683,11 @@ export const FooterPhoto = styled.img`
 export const FooterDescription = styled.span`
   color: ${props => props.theme.color.secondary};
   font-family: ${props => props.theme.fonts.spaceMono};
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    text-align: center;
+  }
 `;
 
 export const FooterLocationContainer = styled.div`
@@ -492,21 +695,37 @@ export const FooterLocationContainer = styled.div`
   color: ${props => props.theme.color.secondary};
   align-items: center;
   gap: .6em;
+
+  @media screen and (max-width: 1100px) {
+    justify-content: center;
+  }
 `;
 
 export const FooterLocationIcon = styled(FontAwesomeIcon)`
   font-size: 1.3em;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 1.1em;
+  }
 `;
 
 export const FooterLocationLabel = styled.span`
   font-size: .9em;
   font-family: ${props => props.theme.fonts.spaceMono};
+
+  @media screen and (max-width: 1100px) {
+    font-size: .7em;
+  }
 `;
 
 export const FooterSocialContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1em;
+
+  @media screen and (max-width: 1100px) {
+    justify-content: center;
+  }
 `;
 
 export const FooterSocialLink = styled.a<{ customColor: string }>`
@@ -537,5 +756,10 @@ export const FooterMessage = styled.span`
   a {
     font-weight: 600;
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    margin-top: 1em;
   }
 `;

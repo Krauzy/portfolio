@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-tooltip": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -23,7 +24,8 @@
     "react-dom": "^18",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^0.9.6"
   },
   "devDependencies": {
     "@types/node": "^20",
