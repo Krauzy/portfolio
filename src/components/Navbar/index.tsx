@@ -21,7 +21,7 @@ export default function Navbar() {
       <MenuList off>
         <MenuItem href={'/'}>{localeData.menu.home}</MenuItem>
         <MenuItem href={'/about'}>{localeData.menu.about}</MenuItem>
-        <MenuItem href={'/appplication'}>{localeData.menu.applications}</MenuItem>
+        <MenuItem href={'/application'}>{localeData.menu.applications}</MenuItem>
         <MenuItem href={'/tools'}>{localeData.menu.tools}</MenuItem>
         <MenuItem href={'/games'}>{localeData.menu.games}</MenuItem>
       </MenuList>
@@ -36,12 +36,12 @@ export default function Navbar() {
                 <FontAwesomeIcon icon={actualTheme === 'light' ? faMoon : faSun} />
               </ThemeSwitcher>
               <LocaleSwitcher onClick={() => switchLocale(locale === 'pt' ? 'en' : 'pt')}>{locale}</LocaleSwitcher>
-              <LoginButton>login</LoginButton>
+              <LoginButton href={'/login'}>login</LoginButton>
             </WidgetSettings>
             <MenuList>
               <MenuItem href={'/'}>{localeData.menu.home}</MenuItem>
               <MenuItem href={'/about'}>{localeData.menu.about}</MenuItem>
-              <MenuItem href={'/appplication'}>{localeData.menu.applications}</MenuItem>
+              <MenuItem href={'/application'}>{localeData.menu.applications}</MenuItem>
               <MenuItem href={'/tools'}>{localeData.menu.tools}</MenuItem>
               <MenuItem href={'/games'}>{localeData.menu.games}</MenuItem>
             </MenuList>
@@ -53,7 +53,7 @@ export default function Navbar() {
           <FontAwesomeIcon icon={actualTheme === 'light' ? faMoon : faSun} />
         </ThemeSwitcher>
         <LocaleSwitcher onClick={() => switchLocale(locale === 'pt' ? 'en' : 'pt')}>{locale}</LocaleSwitcher>
-        <LoginButton>login</LoginButton>
+        <LoginButton href={'/login'}>login</LoginButton>
       </WidgetSettings>
     </NavContainer>
   )

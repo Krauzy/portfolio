@@ -130,7 +130,7 @@ export const LocaleSwitcher = styled.button`
   }
 `;
 
-export const LoginButton = styled.button`
+export const LoginButton = styled.a`
   background-color: ${props => props.theme.color.purple};
   height: 2.2em;
   font-weight: 600;

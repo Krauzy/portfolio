@@ -160,6 +160,17 @@ interface DataLocale {
     assignment: string;
     photo: string;
     endMessage: string;
+  },
+  login: {
+    exit: string;
+    email: string;
+    emailPlaceholder: string;
+    emailError: string;
+    password: string;
+    passwordPlaceholder: string;
+    passwordError: string;
+    loginButton: string;
+    back: string;
   }
 }
 
@@ -471,6 +482,17 @@ export const portugueseData : DataLocale = {
     assignment: 'Krauzy',
     photo: 'https://avatars.githubusercontent.com/u/30305307?v=4',
     endMessage: 'Feito com o ♥️ por <a href="https://github.com/Krauzy" target="_blank">@Krauzy</a>'
+  },
+  login: {
+    exit: 'sair',
+    email: 'Email',
+    emailError: 'Email inválido',
+    emailPlaceholder: 'email@dominio.com',
+    password: 'Senha',
+    passwordPlaceholder: '•••••••••••',
+    passwordError: 'Senha inválida',
+    loginButton: 'ENTRAR',
+    back: 'voltar ao início'
   }
 }
 
@@ -782,6 +804,17 @@ export const englishData : DataLocale = {
     assignment: 'Krauzy',
     photo: 'https://avatars.githubusercontent.com/u/30305307?v=4',
     endMessage: 'Made with ♥️ by <a href="https://github.com/Krauzy" target="_blank">@Krauzy</a>'
+  },
+  login: {
+    exit: 'logout',
+    email: 'Email',
+    emailPlaceholder: 'email@domain.com',
+    emailError: 'Invalid email',
+    password: 'Password',
+    passwordPlaceholder: '•••••••••••',
+    passwordError: 'Invalid password',
+    loginButton: 'LOGIN',
+    back: 'back to home'
   }
 }
 

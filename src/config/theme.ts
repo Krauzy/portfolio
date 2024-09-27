@@ -17,6 +17,10 @@ interface ThemeProperties {
     yellow: string;
     success: string;
     error: string;
+    variation: {
+      primary: (opacity: number) => string;
+      secondary: (opacity: number) => string;
+    }
   },
   widget: {
     pack1: {
@@ -47,7 +51,11 @@ export const lightTheme : ThemeProperties = {
     pink: '#EB459E',
     yellow: '#FEE75C',
     success: '#57F287',
-    error: '#ED4245'
+    error: '#ED4245',
+    variation: {
+      primary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`,
+      secondary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`
+    }
   },
   widget: {
     pack1: {
@@ -78,7 +86,11 @@ export const darkTheme : ThemeProperties = {
     pink: '#EB459E',
     yellow: '#FEE75C',
     success: '#57F287',
-    error: '#ED4245'
+    error: '#ED4245',
+    variation: {
+      primary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`,
+      secondary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`
+    }
   },
   widget: {
     pack1: {
