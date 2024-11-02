@@ -46,7 +46,7 @@ export default function Login() {
   }, [email, password, setLoading]);
 
   return (
-    <Tile maxWidth={1440} title={`krauzy • ${title}`}>
+    <Tile maxWidth={1440} title={`krauzy • ${title}`} >
       <Navbar />
       <LoginContainer>
         <LoginContent onSubmit={(e) => {

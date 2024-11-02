@@ -9,7 +9,7 @@ export const TileContainer = styled.div<{ maxWidth: number }>`
   padding: 1.4em 2em;
 `;
 
-export const NotificationCotainer = styled.div`
+export const NotificationContainer = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
