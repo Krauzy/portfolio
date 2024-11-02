@@ -21,9 +21,10 @@ export default function Admin() {
   const [screenResolution, setScreenResolution] = useState<string | undefined>();
   const [language, setLanguage] = useState<string | undefined>();
   const [cookies, setCookies] = useState<string | undefined>();
-  const [media, setMedia] = useState<string | undefined>();
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (ip === undefined) {
       fetch('https://api.ipify.org?format=json')
       .then(response => response.json())
@@ -35,6 +36,8 @@ export default function Admin() {
   }, [ip, setIp]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     const userAgent = navigator.userAgent;
   
     if (browser === undefined || browserVersion === undefined) {
@@ -82,6 +85,8 @@ export default function Admin() {
   }, [browser, browserVersion, setBrowser]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (os === undefined) {
       const userAgent = navigator.userAgent;
   
@@ -100,6 +105,8 @@ export default function Admin() {
   }, [os, setOs]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     interface NetworkInformation {
       effectiveType?: string;
     }
@@ -118,12 +125,16 @@ export default function Admin() {
   }, [network]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (timezone === undefined) {
       setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone);
     }
   }, [timezone]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position: GeolocationPosition) => {
@@ -140,24 +151,32 @@ export default function Admin() {
   }, [latitude, longitude]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (browserResolution === undefined) {
       setBrowserResolution(`${window.innerWidth}px X ${window.innerHeight}px`)
     }
   }, [browserResolution]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (screenResolution === undefined) {
       setScreenResolution(`${window.screen.width}px X ${window.screen.height}px`);
     }
   }, [screenResolution]);
 
   useEffect(() => {
+    if (!navigator) return;
+
     if (language ===  undefined) {
       setLanguage(navigator.language);
     }
   }, [language]);
 
   useEffect(() => {
+    if (!navigator) return;
+    
     if (cookies === undefined) {
       setCookies(document.cookie === '' ? '-' : document.cookie.split(';').length.toString());
     }
