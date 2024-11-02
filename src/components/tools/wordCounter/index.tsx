@@ -1,12 +1,11 @@
 'use client'
 
-import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { ToolBackButton, ToolContainer, ToolDescription, ToolDescriptionHeader, ToolDescriptionSubtitle, ToolDescriptionText, ToolDescriptionTitle, ToolHeader, ToolHeaderContent, ToolIconContent, ToolTitle } from "../styles";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import getLocale from "@/config/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TopKeywordCount, TopKeywordRow, TopKeywordText, WordCounterContent, WordCounterEditor, WordCounterFeedback, WordCounterFeedbackBox, WordCounterFeedbackContent, WordCounterFeedbackTitle, WordCounterFeedbackValue, WordCounterTopKeyWordsContainer, WordCounterTopKeyWordsContent, WordCounterTopKeyWordsTitle } from "./styles";
-import getMetaInfo from "@/service/metaInfo";
 
 interface WordMetrics {
   wordCounter: number;
@@ -224,9 +223,6 @@ export default function WordCounter() {
 
   useEffect(() => {
     setLocal(locale === 'pt' ? ptLocale : enLocale);
-    getMetaInfo("https://d4builds.gg/builds/87fa072a-50b1-4232-aed9-d28848d8cc5f/").then(meta => {
-      console.log(meta);
-    });
   }, [locale]);
 
   function top6Occurrences(arr: string[]): { value: string, count: number }[] {

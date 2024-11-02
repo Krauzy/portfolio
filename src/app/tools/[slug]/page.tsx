@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Tile from "@/components/Tile";
 import MarkdownWriter from "@/components/tools/markdownWriter";
 import WordCounter from "@/components/tools/wordCounter";
+import { useEffect, useState } from "react";
 
 interface DataTools {
   tools: {
@@ -12,7 +13,19 @@ interface DataTools {
   }[];
 }
 
-export default function Tool({ params } : Readonly<{ params: { slug: string } }>) {
+export default function Tool({
+  params,
+}: Readonly<{
+  params: Promise<{ slug: string }>
+}>) {
+
+  const [slug, setSlug] = useState<string>("");
+
+  useEffect(() => {
+    params.then(({ slug }) => {
+      setSlug(slug);
+    })
+  }, [params]);
 
   const dataTools: DataTools = {
     tools: [
@@ -26,11 +39,11 @@ export default function Tool({ params } : Readonly<{ params: { slug: string } }>
       }
     ]
   }
-
+  
   return (
-    <Tile maxWidth={1440} title={`krauzy • ${params.slug}`}>
+    <Tile maxWidth={1440} title={`krauzy • ${slug}`}>
       <Navbar selected="tools" />
-      {dataTools.tools.filter(tool => tool.slug === params.slug)[0].render}
+      {slug && dataTools.tools.filter(tool => tool.slug === slug)[0].render}
     </Tile>
   )
 }
