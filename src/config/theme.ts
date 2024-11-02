@@ -20,6 +20,7 @@ interface ThemeProperties {
     variation: {
       primary: (opacity: number) => string;
       secondary: (opacity: number) => string;
+      purple: (opacity: number) => string;
     }
   },
   widget: {
@@ -38,7 +39,7 @@ interface ThemeProperties {
   }
 }
 
-export const lightTheme : ThemeProperties = {
+export const darkTheme : ThemeProperties = {
   fonts: {
     spaceMono: spaceMono.style.fontFamily,
     alexBrush: alexBrush.style.fontFamily
@@ -54,7 +55,8 @@ export const lightTheme : ThemeProperties = {
     error: '#ED4245',
     variation: {
       primary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`,
-      secondary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`
+      secondary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`,
+      purple: (opacity: number) => `rgba(88, 101, 242, ${opacity})`
     }
   },
   widget: {
@@ -73,7 +75,7 @@ export const lightTheme : ThemeProperties = {
   }
 }
 
-export const darkTheme : ThemeProperties = {
+export const lightTheme : ThemeProperties = {
   fonts: {
     spaceMono: spaceMono.style.fontFamily,
     alexBrush: alexBrush.style.fontFamily
@@ -89,7 +91,8 @@ export const darkTheme : ThemeProperties = {
     error: '#ED4245',
     variation: {
       primary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`,
-      secondary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`
+      secondary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`,
+      purple: (opacity: number) => `rgba(88, 101, 242, ${opacity})`
     }
   },
   widget: {

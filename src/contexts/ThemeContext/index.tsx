@@ -21,13 +21,39 @@ interface ThemeContextProviderProperties {
 }
 
 export default function ThemeContextProvider({ children } : Readonly<ThemeContextProviderProperties>) {
-  
-  const [themeMode, setThemeMode] = useState<'light' | 'dark'>('light');
-  const [locale, setLocale] = useState<'pt' | 'en'>('pt');
+  const themeStorage = localStorage.getItem('theme-context');
+  const localeStorage = localStorage.getItem('locale-context');
+  let selectedTheme = '';
+  let selectedLocale = '';
+
+  if (themeStorage) {
+    selectedTheme = themeStorage;
+  } else {
+    selectedTheme = 'dark';
+  }
+
+  if (localeStorage) {
+    selectedLocale = localeStorage;
+  } else {
+    selectedLocale = 'pt';
+  }
+
+  const [themeMode, setThemeMode] = useState<string>(selectedTheme);
+  const [locale, setLocale] = useState<string>(selectedLocale);
+
+  const switchLocale = (value: string) => {
+    localStorage.setItem('locale-context', value);
+    setLocale(value);
+  }
+
+  const switchMode = (value: string) => {
+    localStorage.setItem('theme-context', value);
+    setThemeMode(value);
+  }
 
   return (
-    <ThemeContext.Provider value={{ switchMode: setThemeMode, actualTheme: themeMode, switchLocale: setLocale, locale: locale }}>
+    <ThemeContext.Provider value={{ switchMode: switchMode, actualTheme: themeMode, switchLocale: switchLocale, locale: locale }}>
       {children}
     </ThemeContext.Provider>
-  )
+  );
 }

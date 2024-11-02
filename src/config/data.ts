@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faAws, faDocker, faFigma, faGitAlt, faGithub, faGoogle, faInstagram, faJava, faJediOrder, faLinkedinIn, faMicrosoft, faNodeJs, faPython, faReact, faSquareJs, faUbuntu } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faEnvelope, faLeaf } from "@fortawesome/free-solid-svg-icons";
+import { faAws, faDocker, faFigma, faGitAlt, faGithub, faGoogle, faInstagram, faJava, faJediOrder, faLinkedinIn, faMarkdown, faMicrosoft, faNodeJs, faPython, faReact, faSquareJs, faUbuntu } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase, faEnvelope, faFileLines, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 export const localeUtils = {
   pt: {
@@ -171,6 +171,50 @@ interface DataLocale {
     passwordError: string;
     loginButton: string;
     back: string;
+  },
+  tools: {
+    title: string;
+    description: string;
+    categoryTitle: string;
+    anchorDescription: string;
+    dateDescription: string;
+    backMessage: string;
+    categoryTypeList: {
+      name: string;
+      index: number;
+    }[];
+    categoryTools: {
+      title: string;
+      subtitle: string;
+      description: string;
+      foreColor: string;
+      backgroundColor: string;
+      icon: IconProp;
+      slug: string;
+      categories: number[];
+      link: string;
+      date: Date;
+    }[];
+  },
+  admin: {
+    title: string;
+    subtitle: string;
+    ip: string;
+    browser: string;
+    browserVersion: string;
+    os: string;
+    networkProvider: string;
+    timeZone: string;
+    location: string;
+    resolution: string;
+    screen: string;
+    language: string;
+    cookies: string;
+    processors: string;
+    javascript: string;
+    silverLight: string;
+    flash: string;
+    adBlocker: string;
   }
 }
 
@@ -493,6 +537,94 @@ export const portugueseData : DataLocale = {
     passwordError: 'Senha inválida',
     loginButton: 'ENTRAR',
     back: 'voltar ao início'
+  },
+  tools: {
+    title: 'Ferramentas',
+    description: 'Abaixo estão algumas ferramentas que eu criei e integrei com essa plataforma, fique a vontade para testá-los a vontade, só tome cuidado, alguns poder ser bem agressivos 😈',
+    categoryTitle: 'Categorias',
+    anchorDescription: 'Ver',
+    dateDescription: 'dia(s) atrás',
+    backMessage: 'Voltar para ferramentas',
+    categoryTypeList: [
+      {
+        name: 'Favoritos',
+        index: 0
+      },
+      {
+        name: 'Marketing',
+        index: 1
+      },
+      {
+        name: 'Escrita',
+        index: 2
+      }
+    ],
+    categoryTools: [
+      {
+        title: 'Editor Markdown',
+        subtitle: 'Editor Markdown online para escrever em markdown com visualização em tempo real.',
+        description: `
+        <h1>Como usar o Editor Markdown?</h1>
+        <br/>
+        <ul>
+          <li>• Escreva em markdown dentro do editor à esquerda.</li>
+          <li>• O markdown compilado (HTML) será exibido à direita em tempo real.</li>
+          <li>• Você pode consultar o <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Guia Markdown</a> para escrever em Markdown.</li>
+          <li>• Não armazenamos nenhum texto seu, pois tudo é feito do lado do cliente.</li>
+        </ul>
+        `,
+        slug: 'markdown-writer',
+        icon: faMarkdown,
+        backgroundColor: '#57F287',
+        foreColor: '#FFFFFF',
+        categories: [0, 1],
+        link: '/tools/markdown-writer',
+        date: new Date('2024-10-08')
+      },
+      {
+        title: 'Contador de Palavras',
+        subtitle: 'Contador de palavras para contar palavras, caracteres, frases e parágrafos em um texto.',
+        description: `
+        <h1>Como usar o Contador de Palavras?</h1>
+        <br/>
+        <ul>
+          <li>• Insira seu conteúdo de texto na área acima.</li>
+          <li>• A contagem de palavras, caracteres, espaços em branco, frases e parágrafos será exibida automaticamente.</li>
+          <li>• O tempo de leitura é exibido com base em uma velocidade de leitura de 275 palavras por minuto.</li>
+          <li>• A legibilidade é calculada usando o <a href="https://en.wikipedia.org/wiki/Automated_readability_index" target="_blank">índice de legibilidade automatizado</a>.</li>
+          <li>• As 6 palavras-chave mais usadas no conteúdo também serão exibidas.</li>
+          <li>• Não armazenamos nenhum conteúdo seu, pois tudo é feito do lado do cliente.</li>
+        </ul>
+        `,
+        slug: 'word-counter',
+        icon: faFileLines,
+        backgroundColor: '#5865F2',
+        foreColor: '#FFFFFF',
+        categories: [1, 2],
+        link: '/tools/word-counter',
+        date: new Date('2024-10-15')
+      }
+    ]
+  },
+  admin: {
+    title: 'HAHAHA',
+    subtitle: 'Ta brincando que você tentou acessar o painel de controle sem ser o ADMINISTRADOR??? Segue algumas informações que consegui de você só por tentar fazer essa merda... Não haverá uma segunda vez XD',
+    ip: 'IP',
+    browser: 'Navegador',
+    browserVersion: 'Versão',
+    os: 'SO',
+    networkProvider: 'Conexão',
+    timeZone: 'Fuso-Horário',
+    location: 'Localização',
+    resolution: 'Resol. Navegador',
+    screen: 'Resol. Tela',
+    language: 'Idioma',
+    cookies: 'Cookies',
+    processors: 'Processadores',
+    javascript: 'Javascript',
+    silverLight: 'Silverlight',
+    flash: 'Flash',
+    adBlocker: 'Ad-Block'
   }
 }
 
@@ -815,6 +947,93 @@ export const englishData : DataLocale = {
     passwordError: 'Invalid password',
     loginButton: 'LOGIN',
     back: 'back to home'
+  },
+  tools: {
+    title: 'Tools',
+    description: 'Below are some tools that I created and integrated with this platform, feel free to test them at will, just be careful, some can be quite aggressive 😈',
+    categoryTitle: 'Categories',
+    anchorDescription: 'Check',
+    dateDescription: 'days ago',
+    backMessage: 'Back to tools',
+    categoryTypeList: [
+      {
+        name: 'Favorites',
+        index: 0
+      },
+      {
+        name: 'Marketing',
+        index: 1
+      },
+      {
+        name: 'Writing',
+        index: 2
+      }
+    ],
+    categoryTools: [
+      {
+        title: 'Markdown Editor',
+        subtitle: 'Online Markdown Editor for writing in markdown with real-time preview.',
+        description: `
+        <h1>How to use the Markdown Editor?</h1>
+        <br/>
+        <ul>
+        <li>• Write in markdown inside the editor on the left.</li>
+        <li>• Compiled markdown (HTML) will be displayed on the right in real-time.</li>
+        <li>• You can refer to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a> for writing in markdown.</li>
+        <li>• We do not store any of your text as everything is done client side.</li>
+        </ul>
+        `,
+        slug: 'markdown-writer',
+        icon: faMarkdown,
+        backgroundColor: '#57F287',
+        foreColor: '#FFFFFF',
+        categories: [0, 1],
+        link: '/tools/markdown-writer',
+        date: new Date('2024-10-08')
+      },
+      {
+        title: 'Word Counter',
+        subtitle: 'Word Counter to count words, characters, sentences and paragraphs in a text.', 
+        description: `
+        <h1>How to use the Word Counter?</h1>
+        <br/> 
+        <ul>
+        <li>• Enter your text content in the area above.</li>
+        <li>• The count of words, characters, whitespace, sentences and paragraphs will be displayed automatically.</li>
+        <li>• Reading time is displayed based on a reading speed of 275 words per minute.</li>
+        <li>• Readability is calculated using the <a href="https://en.wikipedia.org/wiki/Automated_readability_index" target="_blank">automated readability index</a>.</li>
+        <li>• The 6 most used keywords in the content will also be displayed.</li>
+        <li>• We do not store any of your content as everything is done client-side.</li> 
+        </ul>`,
+        slug: 'word-counter',
+        icon: faFileLines,
+        backgroundColor: '#5865F2',
+        foreColor: '#FFFFFF',
+        categories: [1, 2],
+        link: '/tools/word-counter',
+        date: new Date('2024-10-15')
+      }
+    ]
+  },
+  admin: {
+    title: 'HAHAHA',
+    subtitle: `Are you kidding me that you tried to access the control panel without being the ADMINISTRATOR??? Here's some information I got from you just for trying to do this shit... There won't be a second time XD`,
+    ip: 'IP',
+    browser: 'Browser',
+    browserVersion: `Version`,
+    os: 'OS',
+    networkProvider: 'Network',
+    timeZone: 'Timezone',
+    location: 'Location',
+    resolution: `Browser's Resol.`,
+    screen: `Screen's Resol.`,
+    language: 'Language',
+    cookies: 'Cookies',
+    processors: 'Processors',
+    javascript: 'Javascript',
+    silverLight: 'Silverlight',
+    flash: 'Flash',
+    adBlocker: 'Ad-Block'
   }
 }
 

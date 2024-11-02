@@ -57,7 +57,7 @@ export default function Home() {
   
   return (
     <Tile maxWidth={1440} title={`krauzy • ${title}`}>
-      <Navbar />
+      <Navbar selected={'home'} />
       <HomeWelcomeContainer>
         <MessageWelcomeContainer>
           <TooltipProvider>

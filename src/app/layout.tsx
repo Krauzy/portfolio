@@ -5,6 +5,7 @@ import GlobalLayout from "@/layout/global";
 import "@/layout/globals.css";
 import { cn } from "@/lib/utils"
 import StyledComponentsRegistry from "./registry";
+import LoadingContextProvider from "@/contexts/LoadingContext";
 
 export default function RootLayout({
   children,
@@ -12,12 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={cn(`antialiased font-sans`)}>
         <ThemeContextProvider>
           <GlobalLayout>
             <StyledComponentsRegistry>
-              {children}
+              <LoadingContextProvider>
+                {children}
+              </LoadingContextProvider>
             </StyledComponentsRegistry>
           </GlobalLayout>
         </ThemeContextProvider>

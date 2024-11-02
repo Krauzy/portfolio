@@ -14,7 +14,7 @@ export const LoginContainer = styled.div`
   }
 `;
 
-export const LoginContent = styled.div`
+export const LoginContent = styled.form`
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,8 @@ export const LoginButton = styled.button`
   transition: all .2s ease-in-out;
 
   &:hover {
-    opacity: .75;
+    background-color: ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.purple};
   }
 
   @media screen and (max-width: 1100px) {

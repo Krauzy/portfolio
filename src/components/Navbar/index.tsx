@@ -7,7 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { Sheet } from "../ui/sheet";
 
-export default function Navbar() {
+interface NavbarProperties {
+  selected?: 'home' | 'about' | 'application' | 'tools' | 'games'
+}
+
+export default function Navbar({
+  selected
+}: Readonly<NavbarProperties>) {
 
   const { locale, switchLocale, actualTheme, switchMode } = useContext(ThemeContext);
   const localeData = getLocale(locale);
@@ -19,11 +25,11 @@ export default function Navbar() {
         <LogoTitle>{localeData.title}</LogoTitle>
       </Logo>
       <MenuList off>
-        <MenuItem href={'/'}>{localeData.menu.home}</MenuItem>
-        <MenuItem href={'/about'}>{localeData.menu.about}</MenuItem>
-        <MenuItem href={'/application'}>{localeData.menu.applications}</MenuItem>
-        <MenuItem href={'/tools'}>{localeData.menu.tools}</MenuItem>
-        <MenuItem href={'/games'}>{localeData.menu.games}</MenuItem>
+        <MenuItem href={'/'} selected={selected === 'home'}>{localeData.menu.home}</MenuItem>
+        <MenuItem href={'/about'} selected={selected === 'about'}>{localeData.menu.about}</MenuItem>
+        <MenuItem href={'/application'} selected={selected === 'application'}>{localeData.menu.applications}</MenuItem>
+        <MenuItem href={'/tools'} selected={selected === 'tools'}>{localeData.menu.tools}</MenuItem>
+        <MenuItem href={'/games'} selected={selected === 'games'}>{localeData.menu.games}</MenuItem>
       </MenuList>
       <ResponsiveMenu>
         <Sheet>

@@ -68,16 +68,23 @@ export const ResponsiveMenuContent = styled(SheetContent)`
   flex-direction: column;
 `;
 
-export const MenuItem = styled(Link)`
+export const MenuItem = styled(Link)<{ selected?: boolean }>`
   color: ${props => props.theme.color.secondary};
   font-size: 1.2em;
   font-family: ${props => props.theme.fonts.spaceMono};
   border-bottom: 2px solid ${props => props.theme.color.primary};
   transition: all .2s ease-in-out;
 
-  &:hover {
-    border-bottom: 2px solid ${props => props.theme.color.secondary};
-  }
+  ${props => props.selected ? css`
+    color: ${props => props.theme.color.purple};
+  ` : css`
+    color: ${props => props.theme.color.secondary};
+
+    &:hover {
+      border-bottom: 2px solid ${props => props.theme.color.secondary};
+    }
+  `}
+
 `;
 
 export const WidgetSettings = styled.div<{ off?: boolean }>`
@@ -130,7 +137,7 @@ export const LocaleSwitcher = styled.button`
   }
 `;
 
-export const LoginButton = styled.a`
+export const LoginButton = styled(Link)`
   background-color: ${props => props.theme.color.purple};
   height: 2.2em;
   font-weight: 600;

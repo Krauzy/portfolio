@@ -9,7 +9,7 @@ interface TileProperties {
 export default function Tile({ 
   maxWidth, 
   title,
-  children } : TileProperties) {
+  children } : Readonly<TileProperties>) {
   return (
     <TileContainer maxWidth={maxWidth}>
       <title>{title}</title>
