@@ -5,6 +5,10 @@ import { AdminContainer, AdminContent, AdminSubtitle, AdminTitle, AdminValuedCon
 import { ThemeContext } from "@/contexts/ThemeContext";
 import getLocale from "@/config/data";
 
+interface NetworkInformation {
+  effectiveType?: string;
+}
+
 export default function Admin() {
   const { locale } = useContext(ThemeContext);
   const localeData = getLocale(locale);
@@ -21,166 +25,128 @@ export default function Admin() {
   const [screenResolution, setScreenResolution] = useState<string | undefined>();
   const [language, setLanguage] = useState<string | undefined>();
   const [cookies, setCookies] = useState<string | undefined>();
+  const [hardware, setHardware] = useState<string | undefined>();
 
   useEffect(() => {
-    if (!navigator) return;
-
-    if (ip === undefined) {
-      fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => {
-        setIp(data.ip);
-      })
-      .catch(error => console.error('Erro ao pegar o IP:', error));
-    }
-  }, [ip, setIp]);
-
-  useEffect(() => {
-    if (!navigator) return;
-
-    const userAgent = navigator.userAgent;
-  
-    if (browser === undefined || browserVersion === undefined) {
-      if (userAgent.indexOf("Chrome") > -1) {
-        setBrowser('Google Chrome');
-        const match = userAgent.match(/Chrome\/(\d+)/);
-        if (match) {
-          setBrowserVersion(match[1]);
-        }
-      } else if (userAgent.indexOf("Firefox") > -1) {
-        setBrowser('Mozilla Firefox');
-        const match = userAgent.match(/Firefox\/(\d+)/);
-        if (match) {
-          setBrowserVersion(match[1]);
-        }
-      } else if (userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") === -1) {
-        setBrowser('Safari');
-        const match = userAgent.match(/Version\/(\d+)/);
-        if (match) {
-          setBrowserVersion(match[1]);
-        }
-      } else if (userAgent.indexOf("Edge") > -1) {
-        setBrowser('Microsoft Edge');
-        const match = userAgent.match(/Edge\/(\d+)/);
-        if (match) {
-          setBrowserVersion(match[1]);
-        }
-      } else if (userAgent.indexOf("Opera") > -1 || userAgent.indexOf("OPR") > -1) {
-        setBrowser('Opera');
-        const match = userAgent.match(/OPR\/(\d+)/);
-        if (match) {
-          setBrowserVersion(match[1]);
-        }
-      } else if (userAgent.indexOf("MSIE") > -1) {
-        setBrowser('Internet Explorer');
-        const match = userAgent.match(/MSIE (\d+)/);
-        if (match) {
-          setBrowserVersion(match[1]);
-        }
-      } else {
-        setBrowser('-');
-        setBrowserVersion('-');
+    if (navigator) {
+      if (ip === undefined) {
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          setIp(data.ip);
+        })
+        .catch(error => console.error('Erro ao pegar o IP:', error));
       }
-    }
-  }, [browser, browserVersion, setBrowser]);
 
-  useEffect(() => {
-    if (!navigator) return;
-
-    if (os === undefined) {
       const userAgent = navigator.userAgent;
   
-      if (userAgent.indexOf('Windows NT 10.0') !== -1) setOs('Windows 10');
-      if (userAgent.indexOf('Windows NT 6.3') !== -1) setOs('Windows 8.1');
-      if (userAgent.indexOf('Windows NT 6.2') !== -1) setOs('Windows 8');
-      if (userAgent.indexOf('Windows NT 6.1') !== -1) setOs('Windows 7');
-      if (userAgent.indexOf('Windows NT 6.0') !== -1) setOs('Windows Vista');
-      if (userAgent.indexOf('Windows NT 5.1') !== -1) setOs('Windows XP');
-      if (userAgent.indexOf('Mac OS X') !== -1) setOs('macOS');
-      if (userAgent.indexOf('Linux') !== -1) setOs('Linux');
-      if (/Android/.test(userAgent)) setOs('Android');
-      if (/iPhone|iPad|iPod/.test(userAgent)) setOs('iOS');
-    }
-
-  }, [os, setOs]);
-
-  useEffect(() => {
-    if (!navigator) return;
-
-    interface NetworkInformation {
-      effectiveType?: string;
-    }
-
-    if (network === undefined) {
-      const nav = navigator as any; // Tipagem para navegadores que suportam a API Network Information
-  
-      if ('connection' in nav) {
-        const connection: NetworkInformation = nav.connection || nav.mozConnection || nav.webkitConnection;
-        if (connection && connection.effectiveType) {
-          setNetwork(connection.effectiveType);
+      if (browser === undefined || browserVersion === undefined) {
+        if (userAgent.indexOf("Chrome") > -1) {
+          setBrowser('Google Chrome');
+          const match = userAgent.match(/Chrome\/(\d+)/);
+          if (match) {
+            setBrowserVersion(match[1]);
+          }
+        } else if (userAgent.indexOf("Firefox") > -1) {
+          setBrowser('Mozilla Firefox');
+          const match = userAgent.match(/Firefox\/(\d+)/);
+          if (match) {
+            setBrowserVersion(match[1]);
+          }
+        } else if (userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") === -1) {
+          setBrowser('Safari');
+          const match = userAgent.match(/Version\/(\d+)/);
+          if (match) {
+            setBrowserVersion(match[1]);
+          }
+        } else if (userAgent.indexOf("Edge") > -1) {
+          setBrowser('Microsoft Edge');
+          const match = userAgent.match(/Edge\/(\d+)/);
+          if (match) {
+            setBrowserVersion(match[1]);
+          }
+        } else if (userAgent.indexOf("Opera") > -1 || userAgent.indexOf("OPR") > -1) {
+          setBrowser('Opera');
+          const match = userAgent.match(/OPR\/(\d+)/);
+          if (match) {
+            setBrowserVersion(match[1]);
+          }
+        } else if (userAgent.indexOf("MSIE") > -1) {
+          setBrowser('Internet Explorer');
+          const match = userAgent.match(/MSIE (\d+)/);
+          if (match) {
+            setBrowserVersion(match[1]);
+          }
+        } else {
+          setBrowser('-');
+          setBrowserVersion('-');
         }
       }
-      setNetwork('-');
-    }
-  }, [network]);
 
-  useEffect(() => {
-    if (!navigator) return;
+      if (os === undefined) {    
+        if (userAgent.indexOf('Windows NT 10.0') !== -1) setOs('Windows 10');
+        if (userAgent.indexOf('Windows NT 6.3') !== -1) setOs('Windows 8.1');
+        if (userAgent.indexOf('Windows NT 6.2') !== -1) setOs('Windows 8');
+        if (userAgent.indexOf('Windows NT 6.1') !== -1) setOs('Windows 7');
+        if (userAgent.indexOf('Windows NT 6.0') !== -1) setOs('Windows Vista');
+        if (userAgent.indexOf('Windows NT 5.1') !== -1) setOs('Windows XP');
+        if (userAgent.indexOf('Mac OS X') !== -1) setOs('macOS');
+        if (userAgent.indexOf('Linux') !== -1) setOs('Linux');
+        if (/Android/.test(userAgent)) setOs('Android');
+        if (/iPhone|iPad|iPod/.test(userAgent)) setOs('iOS');
+      }
 
-    if (timezone === undefined) {
-      setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone);
-    }
-  }, [timezone]);
-
-  useEffect(() => {
-    if (!navigator) return;
-
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position: GeolocationPosition) => {
-          setLongitude(position.coords.longitude);
-          setLatitude(position.coords.latitude);
-        },
-        (error: GeolocationPositionError) => {
-          console.error(`Error getting location: ${error.message}`);
-        }
-      );
-    } else {
-      console.error('Geolocation is not supported by this browser.');
-    }
-  }, [latitude, longitude]);
-
-  useEffect(() => {
-    if (!navigator) return;
-
-    if (browserResolution === undefined) {
-      setBrowserResolution(`${window.innerWidth}px X ${window.innerHeight}px`)
-    }
-  }, [browserResolution]);
-
-  useEffect(() => {
-    if (!navigator) return;
-
-    if (screenResolution === undefined) {
-      setScreenResolution(`${window.screen.width}px X ${window.screen.height}px`);
-    }
-  }, [screenResolution]);
-
-  useEffect(() => {
-    if (!navigator) return;
-
-    if (language ===  undefined) {
-      setLanguage(navigator.language);
-    }
-  }, [language]);
-
-  useEffect(() => {
-    if (!navigator) return;
+      if (network === undefined) {
+        const nav = navigator as any;
     
-    if (cookies === undefined) {
-      setCookies(document.cookie === '' ? '-' : document.cookie.split(';').length.toString());
+        if ('connection' in nav) {
+          const connection: NetworkInformation = nav.connection || nav.mozConnection || nav.webkitConnection;
+          if (connection && connection.effectiveType) {
+            setNetwork(connection.effectiveType);
+          }
+        }
+        setNetwork('-');
+      }
+
+      if (timezone === undefined) {
+        setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone);
+      }
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position: GeolocationPosition) => {
+            setLongitude(position.coords.longitude);
+            setLatitude(position.coords.latitude);
+          },
+          (error: GeolocationPositionError) => {
+            console.error(`Error getting location: ${error.message}`);
+          }
+        );
+      } else {
+        console.error('Geolocation is not supported by this browser.');
+      }
+
+      if (browserResolution === undefined) {
+        setBrowserResolution(`${window.innerWidth}px X ${window.innerHeight}px`)
+      }
+
+      if (screenResolution === undefined) {
+        setScreenResolution(`${window.screen.width}px X ${window.screen.height}px`);
+      }
+
+      if (language ===  undefined) {
+        setLanguage(navigator.language);
+      }
+
+      if (cookies === undefined) {
+        setCookies(document.cookie === '' ? '-' : document.cookie.split(';').length.toString());
+      }
+
+      if (hardware === undefined) {
+        setHardware(navigator.hardwareConcurrency.toString());
+      }
     }
-  }, [cookies]);
+  }, [browser, browserResolution, browserVersion, cookies, hardware, ip, language, network, os, screenResolution, timezone]);
 
   return (
     <AdminContainer>
@@ -235,7 +201,7 @@ export default function Admin() {
           </AdminValuedRow>
           <AdminValuedRow>
             <LabelSide>{localeData.admin.processors}</LabelSide>
-            <ValueSide>{navigator.hardwareConcurrency.toString()}</ValueSide>
+            <ValueSide>{hardware}</ValueSide>
           </AdminValuedRow>
           <AdminValuedRow>
             <LabelSide>{localeData.admin.javascript}</LabelSide>

@@ -4,15 +4,14 @@ import Navbar from "@/components/Navbar"
 import Tile from "@/components/Tile"
 import getLocale, { localeUtils } from "@/config/data"
 import { ThemeContext } from "@/contexts/ThemeContext"
-import { useContext } from "react"
+import { useCallback, useContext } from "react"
 import { Assignment, DoneContainer, DoneHeader, DoneTitle, ExplainingMessageBox, FooterContainer, FooterDescription, FooterHeader, FooterLocationContainer, FooterLocationIcon, FooterLocationLabel, FooterMessage, FooterPhoto, FooterSideLeft, FooterSideRight, FooterSocialContainer, FooterSocialLink, FooterTitle, GhostAsset, GhostAssetContainer, HelloContainer, HelloMessage, HelloSecondaryMessage, HomeWelcomeContainer, IntroContainer, IntroContent, IntroDescription, IntroHeader, IntroTitle, MessageWelcomeContainer, OpeningMessage, RepoContainer, RepoContent, RepoFooterDescription, RepoFooterIcon, RepoHeader, RepoLanguageColor, RepoTitle, RepoWidget, RepoWidgetContent, RepoWidgetFooter, RepoWidgetFooterPack, RepoWidgetHeader, RepoWidgetMark, RepoWidgetTitle, ResumeContainer, ResumeContent, ResumeDate, ResumeDescription, ResumeDescriptionContainer, ResumeHeader, ResumeJobContent, ResumeJobContentSection, ResumeJobSubtitle, ResumeJobTitle, ResumeLogo, ResumeLogoBox, ResumeMainContent, ResumeSection, ResumeTitle, SkillBar, SkillBarBox, SkillBarContainer, SkillContainer, SkillTitle, SkillWarningMessage, TechContainer, TechDescription, TechIcon, TechWidget, WarningMessage } from "./styles"
 import {
   Tooltip,
   TooltipProvider,
 } from "@/components/ui/tooltip"
 import GhostMotion from "@/components/GhostMotion"
-import { IconProp } from "@fortawesome/fontawesome-svg-core"
-import { faBookmark, faCodeBranch, faLocationDot, faMapMarked, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faBookmark, faCodeBranch, faLocationDot, faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function Home() {
@@ -21,27 +20,15 @@ export default function Home() {
   const localeData = getLocale(locale);
   const title = localeData.menu.home;
   
-  const getOpeningMessage = () => {
+  const getOpeningMessage = useCallback(() => {
     const currentHour = (new Date()).getHours();
 
     if (currentHour > 18 || currentHour <= 4) return localeData.helloMessage.night.split(' ');
     else if (currentHour >= 5 && currentHour <= 11) return localeData.helloMessage.morning.split(' ');
     else return localeData.helloMessage.night.split(' ');
-  }
+  }, [localeData.helloMessage.morning, localeData.helloMessage.night]);
 
-  const shuffleArray = (array: {
-    logo: IconProp;
-    name: string;
-    color: string;
-  }[]) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]]; // Troca os elementos
-    }
-    return array;
-  }
-
-  const getDateDescription = (date: Date) => {
+  const getDateDescription = useCallback((date: Date) => {
     const year = date.getFullYear();
     const month = date.getMonth();
     
@@ -53,7 +40,7 @@ export default function Home() {
       monthDesc = localeUtils.en.months(month);
 
     return `${monthDesc} ${year}`
-  }
+  }, [locale]);
   
   return (
     <Tile maxWidth={1440} title={`krauzy • ${title}`}>
@@ -98,10 +85,10 @@ export default function Home() {
           <GhostMotion color="secondary" />
         </DoneHeader>
         <TechContainer>
-          {shuffleArray(localeData.do.languages).map(tech => (
-            <TechWidget key={tech.name} customColor={tech.color}>
+          {localeData.do.languages.map(tech => (
+            <TechWidget key={tech.name} customColor={tech.color ?? "black"}>
               <TechIcon icon={tech.logo} />
-              <TechDescription>{tech.name}</TechDescription>
+              <TechDescription>{tech.name ?? ""}</TechDescription>
             </TechWidget>
           ))}
         </TechContainer>
