@@ -10,4 +10,4 @@ def hello_world():
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app)
+    uvicorn.run(app) 
