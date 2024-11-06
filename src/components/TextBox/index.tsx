@@ -1,5 +1,6 @@
 import { faWarning } from "@fortawesome/free-solid-svg-icons";
 import { TextBoxContainer, TextBoxError, TextBoxErrorContainer, TextBoxErrorIcon, TextBoxInput, TextBoxLabel } from "./styles";
+import { useEffect } from "react";
 
 interface TextBoxProperties {
   label: string;
@@ -7,6 +8,8 @@ interface TextBoxProperties {
   value: string;
   setValue: (value: string) => void;
   error?: string;
+  isNumber?: boolean;
+  maxWidth?: number;
 }
 
 export default function TextBox({
@@ -14,12 +17,23 @@ export default function TextBox({
   placeholder,
   value,
   setValue,
-  error
-}: TextBoxProperties) {
+  error,
+  isNumber,
+  maxWidth
+}: Readonly<TextBoxProperties>) {
+
+  useEffect(() => {}, [error]);
+
   return (
     <TextBoxContainer>
       <TextBoxLabel>{label}</TextBoxLabel>
-      <TextBoxInput placeholder={placeholder} value={value} onChange={(e) => setValue(e.target.value)} />
+      <TextBoxInput maxLength={maxWidth} placeholder={placeholder} value={value} onChange={(e) => {
+        if (isNumber) {
+          if (!isNaN(Number(e.target.value))) {
+            setValue(e.target.value);
+          }  
+        } else setValue(e.target.value);
+      }} />
       {error && 
         <TextBoxErrorContainer>
           <TextBoxErrorIcon icon={faWarning} />

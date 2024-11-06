@@ -5,7 +5,7 @@ export const WordCounterContent = styled.div`
   background-color: ${props => props.theme.color.variation.secondary(.1)};
   display: flex;
   padding: .2em;
-  border-radius: 12px;
+  border-radius: 8px;
 
   @media screen and (max-width: 1100px) {
     flex-direction: column;
@@ -16,7 +16,7 @@ export const WordCounterEditor = styled.textarea`
   background-color: ${props => props.theme.color.primary};
   resize: none;
   outline: none;
-  border-radius: 9px;
+  border-radius: 5px;
   width: 70%;
   padding: 1em;
   font-family: ${props => props.theme.fonts.spaceMono};

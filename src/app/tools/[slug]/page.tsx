@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Tile from "@/components/Tile";
+import FitMetric from "@/components/tools/fitMetric";
 import MarkdownWriter from "@/components/tools/markdownWriter";
 import WordCounter from "@/components/tools/wordCounter";
 import { useEffect, useState } from "react";
@@ -36,6 +37,10 @@ export default function Tool({
       {
         slug: 'word-counter',
         render: <WordCounter />
+      },
+      {
+        slug: 'fit-metric',
+        render: <FitMetric />
       }
     ]
   }

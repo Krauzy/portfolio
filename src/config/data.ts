@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faAws, faDocker, faFigma, faGitAlt, faGithub, faGoogle, faInstagram, faJava, faJediOrder, faLinkedinIn, faMarkdown, faMicrosoft, faNodeJs, faPython, faReact, faSquareJs, faUbuntu } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faEnvelope, faFileLines, faLeaf } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faDumbbell, faEnvelope, faFileLines, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 export const localeUtils = {
   pt: {
@@ -557,6 +557,10 @@ export const portugueseData : DataLocale = {
       {
         name: 'Escrita',
         index: 2
+      },
+      {
+        name: 'Saúde',
+        index: 3
       }
     ],
     categoryTools: [
@@ -603,6 +607,30 @@ export const portugueseData : DataLocale = {
         categories: [1, 2],
         link: '/tools/word-counter',
         date: new Date('2024-10-15')
+      },
+      {
+        title: 'Métrica Nutricional',
+        subtitle: 'Medidor de métricas nutricionais baseadas nas suas informação de medidida',
+        description: `
+        <h1>Como usar a Métrica Nutrional</h1>
+        <br/>
+        <ul>
+          <li>• Entre com suas informações (sexo, idade, altura e peso))</li>
+          <li>• O <a href="https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal" target="_blank">IMC</a> será calculado basedo na altura e peso.</li>
+          <li>• O <a href="https://pt.wikipedia.org/wiki/Metabolismo_basal" target="_blank">TMB (Taxa Metabólica Basal)</a> será calculado baseado em todos as informações dadas.</li>
+          <li>• O <a href="https://pt.wikipedia.org/wiki/Ingest%C3%A3o_di%C3%A1ria_recomendada" target="_blank">NCD (Necessidade Calórica Diária)</a> será calculado baseado no TMB.</li>
+          <li>• A taxa de gordura corporal estimada será calculada baseado no seu IMC.</li>
+          <li>• O peso ideal será calculado baseado na altura e sexo.</li>
+          <li>• A necessidade de macronutrientes será calculada baseado no NCD.</li>
+        </ul>
+        `,
+        slug: 'fit-metric',
+        icon: faDumbbell,
+        backgroundColor: '#FEE75C',
+        foreColor: '#212121',
+        categories: [0, 3],
+        link: '/tools/fit-metric',
+        date: new Date('2024-11-05')
       }
     ]
   },
@@ -967,6 +995,10 @@ export const englishData : DataLocale = {
       {
         name: 'Writing',
         index: 2
+      },
+      {
+        name: 'Health',
+        index: 3
       }
     ],
     categoryTools: [
@@ -1012,6 +1044,30 @@ export const englishData : DataLocale = {
         categories: [1, 2],
         link: '/tools/word-counter',
         date: new Date('2024-10-15')
+      },
+      {
+        title: 'Fit Metrics',
+        subtitle: 'Nutritional metrics meter based on your measurement information',
+        description: `
+        <h1>How to use Fit Metrics</h1>
+        <br/>
+        <ul>
+          <li>• Enter your information (sex, age, height and weight)</li>
+          <li>• The <a href="https://en.wikipedia.org/wiki/Body_Mass_Index" target="_blank">BMI</a> will be calculated based on your height and weight.</li>
+          <li>• The <a href="https://en.wikipedia.org/wiki/Basal_Metabolism" target="_blank">BMR (Basal Metabolic Rate)</a> will be calculated based on all the information provided.</li>
+          <li>• The <a href="https://en.wikipedia.org/wiki/Dietary_Reference_Intake" target="_blank">DCR (Daily Caloric Requirement)</a> will be calculated based on your BMR.</li>
+          <li>• The estimated body fat percentage will be calculated based on your BMI.</li>
+          <li>• The ideal weight will be calculated based on your height and sex.</li>
+          <li>• Macronutrient requirements will be calculated based on the DCR.</li>
+        </ul>
+        `,
+        slug: 'fit-metric',
+        icon: faDumbbell,
+        backgroundColor: '#FEE75C',
+        foreColor: '#212121',
+        categories: [0, 3],
+        link: '/tools/fit-metric',
+        date: new Date('2024-11-05')
       }
     ]
   },

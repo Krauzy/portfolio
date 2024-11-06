@@ -17,7 +17,7 @@ export default function PasswordBox({
   value,
   setValue,
   error
-}: PasswordBoxProperties) {
+}: Readonly<PasswordBoxProperties>) {
 
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -25,7 +25,7 @@ export default function PasswordBox({
     <PasswordBoxContainer>
       <PasswordBoxLabel>{label}</PasswordBoxLabel>
       <PasswordContentBox>
-        <PasswordBoxInput placeholder={placeholder} type={showPassword ? 'text' : 'password'} />
+        <PasswordBoxInput placeholder={placeholder} type={showPassword ? 'text' : 'password'} value={value} onChange={(e) => setValue(e.target.value)} />
         <PasswordShow>
           <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} onClick={() => setShowPassword(!showPassword)} />
         </PasswordShow>
