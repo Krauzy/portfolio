@@ -130,6 +130,7 @@ ENV/
 env.bak/
 venv.bak/
 .idea/
+.jetclient/
 
 # Spyder project settings
 .spyderproject
