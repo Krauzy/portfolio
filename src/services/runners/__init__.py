@@ -1,0 +1,1 @@
+from .steam_info_collector import run_steam_info_collector
