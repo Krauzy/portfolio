@@ -37,7 +37,7 @@ async def __run_steam_info_collector(playwright: Playwright) -> Union[dict, list
     for i, item in enumerate(most_played_games_images):
         src_image = await most_played_games_images[i].get_attribute('src')
 
-        perc = await most_played_games_perc[i].inner_text().
+        perc = await most_played_games_perc[i].inner_text()
 
         most_played_game_list.append({
             'image': src_image,
