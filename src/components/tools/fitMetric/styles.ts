@@ -101,8 +101,9 @@ export const FitMetricRunContainer = styled.div`
 export const FitMetricRunButton = styled.button`
   border-radius: 8px;
   background-color: ${props => props.theme.color.purple};
-  width: 3em;
+  width: 100%;
   height: 3em;
+  font-weight: 600;
   font-size: 1em;
   color: ${props => props.theme.color.variation.secondary(1)};
   transition: all .2s ease-in-out;

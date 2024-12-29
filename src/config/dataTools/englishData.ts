@@ -321,7 +321,7 @@ export const englishData : DataLocale = {
     backMessage: 'Back to tools',
     categoryTypeList: [
       {
-        name: 'Favorites',
+        name: 'All',
         index: 0
       },
       {
@@ -355,7 +355,7 @@ export const englishData : DataLocale = {
         icon: faMarkdown,
         backgroundColor: '#57F287',
         foreColor: '#FFFFFF',
-        categories: [0, 1],
+        categories: [1],
         link: '/tools/markdown-writer',
         date: new Date('2024-10-08')
       },
@@ -401,7 +401,7 @@ export const englishData : DataLocale = {
         icon: faDumbbell,
         backgroundColor: '#FEE75C',
         foreColor: '#212121',
-        categories: [0, 3],
+        categories: [3],
         link: '/tools/fit-metric',
         date: new Date('2024-11-05')
       }

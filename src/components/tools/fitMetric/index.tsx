@@ -39,7 +39,8 @@ interface FitMetricLocale {
     3: string;
     4: string;
     5: string;
-  }
+  },
+  run: string;
 }
 
 interface FitMetricValue {
@@ -81,7 +82,8 @@ const ptLocale: FitMetricLocale = {
     3: "Obesidade Grau I",
     4: "Obesidade Grau II (Obesidade Severa)",
     5: "Obesidade Grau III (Obesidade Mórbida)"
-  }
+  },
+  run: 'CALCULAR'
 }
 
 const enLocale: FitMetricLocale = {
@@ -115,7 +117,8 @@ const enLocale: FitMetricLocale = {
     3: "Grade I Obesity",
     4: "Grade II Obesity (Severe Obesity)",
     5: "Grade III Obesity (Morbid Obesity)"
-  }
+  },
+  run: 'CALCULATE'
 }
 
 export default function FitMetric() {
@@ -256,9 +259,7 @@ export default function FitMetric() {
             </FitMetricSelectContent>
           </FitMetricSelectContainer>
           <FitMetricRunContainer>
-            <FitMetricRunButton onClick={() => calcFitMetric(gender, activityFactor, weight, height, age)} >
-              <FontAwesomeIcon icon={faBolt} />
-            </FitMetricRunButton>
+            <FitMetricRunButton onClick={() => calcFitMetric(gender, activityFactor, weight, height, age)} >{local.run}</FitMetricRunButton>
           </FitMetricRunContainer>
         </FitMetricInputContainer>
         <FitMetricResultContainer>

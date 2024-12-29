@@ -39,7 +39,7 @@ export default function Tools() {
             </ToolCategoryOptionsContainer>
           </ToolCategoriesContainer>
           <ToolListContainer>
-            {localeData.tools.categoryTools.filter(tool => tool.categories.includes(selectedCategory)).map(tool => (
+            {localeData.tools.categoryTools.filter(tool => selectedCategory === 0 || tool.categories.includes(selectedCategory)).map(tool => (
               <ToolWidget key={tool.title} href={tool.link}>
                 <ToolWidgetOverhaul backgroundColor={tool.backgroundColor} foreColor={tool.foreColor}>
                   <FontAwesomeIcon icon={tool.icon} />

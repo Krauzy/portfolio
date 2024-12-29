@@ -321,7 +321,7 @@ export const portugueseData : DataLocale = {
     backMessage: 'Voltar para ferramentas',
     categoryTypeList: [
       {
-        name: 'Favoritos',
+        name: 'Todos',
         index: 0
       },
       {
@@ -355,7 +355,7 @@ export const portugueseData : DataLocale = {
         icon: faMarkdown,
         backgroundColor: '#57F287',
         foreColor: '#FFFFFF',
-        categories: [0, 1],
+        categories: [1],
         link: '/tools/markdown-writer',
         date: new Date('2024-10-08')
       },
@@ -402,7 +402,7 @@ export const portugueseData : DataLocale = {
         icon: faDumbbell,
         backgroundColor: '#FEE75C',
         foreColor: '#212121',
-        categories: [0, 3],
+        categories: [3],
         link: '/tools/fit-metric',
         date: new Date('2024-11-05')
       }
