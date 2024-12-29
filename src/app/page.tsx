@@ -69,11 +69,11 @@ export default function Home() {
       <IntroContainer>
         <IntroHeader>
           <GhostMotion color="primary" />
-          <IntroTitle>{localeData.about.title}</IntroTitle>
+          <IntroTitle>{localeData.resume.about.title}</IntroTitle>
           <GhostMotion color="primary" />
         </IntroHeader>
         <IntroContent>
-          {localeData.about.description.map((descriptionItem) => (
+          {localeData.resume.about.description.map((descriptionItem) => (
             <IntroDescription key={descriptionItem}>{descriptionItem}</IntroDescription>
           ))}
         </IntroContent>
@@ -81,11 +81,11 @@ export default function Home() {
       <DoneContainer>
         <DoneHeader>
           <GhostMotion color="secondary" />
-          <DoneTitle>{localeData.do.title}</DoneTitle>
+          <DoneTitle>{localeData.resume.do.title}</DoneTitle>
           <GhostMotion color="secondary" />
         </DoneHeader>
         <TechContainer>
-          {localeData.do.languages.map(tech => (
+          {localeData.resume.do.languages.map(tech => (
             <TechWidget key={tech.name} customColor={tech.color ?? "black"}>
               <TechIcon icon={tech.logo} />
               <TechDescription>{tech.name ?? ""}</TechDescription>
@@ -93,7 +93,7 @@ export default function Home() {
           ))}
         </TechContainer>
         <SkillContainer>
-          {localeData.do.metrics.map((metric, index) => (
+          {localeData.resume.do.metrics.map((metric, index) => (
             <SkillBarContainer key={metric.title}>
               <SkillTitle>{metric.title}</SkillTitle>
               <SkillBarBox>
@@ -102,16 +102,16 @@ export default function Home() {
             </SkillBarContainer>
           ))}
         </SkillContainer>
-        <SkillWarningMessage>{localeData.do.warningMetricMessage}</SkillWarningMessage>
+        <SkillWarningMessage>{localeData.resume.do.warningMetricMessage}</SkillWarningMessage>
       </DoneContainer>
       <ResumeContainer>
         <ResumeHeader>
           <GhostMotion color="primary" />
-          <ResumeTitle>{localeData.done.title}</ResumeTitle>
+          <ResumeTitle>{localeData.resume.done.title}</ResumeTitle>
           <GhostMotion color="primary" />
         </ResumeHeader>
         <ResumeContent>
-          {localeData.done.timeline.map(job => (
+          {localeData.resume.done.timeline.map(job => (
             <ResumeSection key={job.title}>
               <ResumeLogoBox>
                 <ResumeLogo src={job.logo} />
@@ -139,11 +139,11 @@ export default function Home() {
       <RepoContainer>
         <RepoHeader>
           <GhostMotion color="secondary" />
-          <RepoTitle>{localeData.creations.title}</RepoTitle>
+          <RepoTitle>{localeData.resume.creations.title}</RepoTitle>
           <GhostMotion color="secondary" />
         </RepoHeader>
         <RepoContent>
-          {localeData.creations.repos.map((repo, index) => (
+          {localeData.resume.creations.repos.map((repo, index) => (
             <RepoWidget key={repo.title} index={index} href={repo.link} target="_blank">
               <RepoWidgetHeader>
                 <RepoWidgetMark icon={faBookmark} />
@@ -172,27 +172,27 @@ export default function Home() {
         <FooterSideLeft>
           <FooterHeader>
             <GhostMotion color="secondary" />
-            <FooterTitle>{localeData.footer.title}</FooterTitle>
+            <FooterTitle>{localeData.resume.footer.title}</FooterTitle>
           </FooterHeader>
-          <FooterDescription>{localeData.footer.description}</FooterDescription>
+          <FooterDescription>{localeData.resume.footer.description}</FooterDescription>
           <FooterLocationContainer>
             <FooterLocationIcon icon={faLocationDot} />
-            <FooterLocationLabel>{localeData.footer.location}</FooterLocationLabel>
+            <FooterLocationLabel>{localeData.resume.footer.location}</FooterLocationLabel>
           </FooterLocationContainer>
           <FooterSocialContainer>
-            {localeData.footer.socialMedias.map(social => (
+            {localeData.resume.footer.socialMedias.map(social => (
               <FooterSocialLink customColor={social.color} href={social.link} key={social.link}>
                 <FontAwesomeIcon icon={social.logo} />
               </FooterSocialLink>
             ))}
           </FooterSocialContainer>
-          <Assignment>-{localeData.footer.assignment}</Assignment>
+          <Assignment>-{localeData.resume.footer.assignment}</Assignment>
         </FooterSideLeft>
         <FooterSideRight>
-          <FooterPhoto src={localeData.footer.photo} />
+          <FooterPhoto src={localeData.resume.footer.photo} />
         </FooterSideRight>
       </FooterContainer>
-      <FooterMessage dangerouslySetInnerHTML={{__html: localeData.footer.endMessage}} />
+      <FooterMessage dangerouslySetInnerHTML={{__html: localeData.resume.footer.endMessage}} />
     </Tile>
   )
 }

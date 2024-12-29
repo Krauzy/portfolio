@@ -90,6 +90,8 @@ export const MenuItem = styled(Link)<{ selected?: boolean }>`
 export const WidgetSettings = styled.div<{ off?: boolean }>`
   font-size: 1.4em;
   display: flex;
+  align-items: center;
+  gap: .6em;
 
   @media screen and (max-width: 1100px) {
     ${props => props.off && css`display: none;`}
@@ -100,16 +102,17 @@ export const ThemeSwitcher = styled.button`
   background-color: ${props => props.theme.color.pink};
   width: 2.2em;
   height: 2.2em;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .8s ease-in-out;
+  transition: all .5s ease-in-out;
   color: ${props => props.theme.color.primary};
   font-size: 1em;
 
   &:hover {
-    padding: 0 1.5em;
+    background-color: ${props => props.theme.color.purple};
+    color: ${props => props.theme.color.secondary};
   }
 
   @media screen and (max-width: 1100px) {
@@ -121,36 +124,19 @@ export const LocaleSwitcher = styled.button`
   background-color: ${props => props.theme.color.yellow};
   width: 2.2em;
   height: 2.2em;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all .8s ease-in-out;
-  color: ${props => props.theme.color.primary};
-
-  &:hover {
-    padding: 0 1.5em;
-  }
-
-  @media screen and (max-width: 1100px) {
-    font-size: .8em;
-  }
-`;
-
-export const LoginButton = styled(Link)`
-  background-color: ${props => props.theme.color.purple};
-  height: 2.2em;
-  font-weight: 600;
-  padding: 0 .8em;
-  border-radius: 0 8px 8px 0;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all .5s ease-in-out;
   color: ${props => props.theme.color.primary};
+  text-transform: uppercase;
 
   &:hover {
-    padding: 0 1.5em;
+    background-color: ${props => props.theme.color.purple};
+    color: ${props => props.theme.color.secondary};
   }
 
   @media screen and (max-width: 1100px) {

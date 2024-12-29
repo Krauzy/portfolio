@@ -1,17 +1,20 @@
 'use client'
 
 import { useContext, useEffect, useState } from "react";
-import { AdminContainer, AdminContent, AdminSubtitle, AdminTitle, AdminValuedContainer, AdminValuedRow, LabelSide, ValueSide } from "./styles";
+import { AboutFooterWarning, AboutContainer, AboutContent, AboutSubtitle, AboutTitle, AboutValuedContainer, AboutValuedRow, LabelSide, ValueSide } from "./styles";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import getLocale from "@/config/data";
+import Tile from "@/components/Tile";
+import Navbar from "@/components/Navbar";
 
 interface NetworkInformation {
   effectiveType?: string;
 }
 
-export default function Admin() {
+export default function About() {
   const { locale } = useContext(ThemeContext);
   const localeData = getLocale(locale);
+  const title = localeData.menu.about;
 
   const [ip, setIp] = useState<string | undefined>();
   const [browser, setBrowser] = useState<string | undefined>();
@@ -149,67 +152,70 @@ export default function Admin() {
   }, [browser, browserResolution, browserVersion, cookies, hardware, ip, language, network, os, screenResolution, timezone]);
 
   return (
-    <AdminContainer>
-      <AdminContent>
-        <AdminTitle>{localeData.admin.title}</AdminTitle>
-        <AdminSubtitle>{localeData.admin.subtitle}</AdminSubtitle>
-        <AdminValuedContainer>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.ip}</LabelSide>
-            <ValueSide>{ip}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.browser}</LabelSide>
-            <ValueSide>{browser}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.browserVersion}</LabelSide>
-            <ValueSide>v{browserVersion}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.os}</LabelSide>
-            <ValueSide>{os}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.networkProvider}</LabelSide>
-            <ValueSide>{network}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.timeZone}</LabelSide>
-            <ValueSide>{timezone}</ValueSide>
-          </AdminValuedRow>
-          {latitude && longitude &&
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.location}</LabelSide>
-            <ValueSide href={`https://www.google.com.br/maps/@${latitude},${longitude},16z`} target="_blank">{'Map'}</ValueSide>
-          </AdminValuedRow>}
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.resolution}</LabelSide>
-            <ValueSide>{browserResolution}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.screen}</LabelSide>
-            <ValueSide>{screenResolution}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.language}</LabelSide>
-            <ValueSide>{language}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.cookies}</LabelSide>
-            <ValueSide>{cookies}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.processors}</LabelSide>
-            <ValueSide>{hardware}</ValueSide>
-          </AdminValuedRow>
-          <AdminValuedRow>
-            <LabelSide>{localeData.admin.javascript}</LabelSide>
-            <ValueSide>{'✅'}</ValueSide>
-          </AdminValuedRow>
-        </AdminValuedContainer>
-
-      </AdminContent>
-    </AdminContainer>
+    <Tile maxWidth={1440} title={`krauzy • ${title}`}>
+      <Navbar selected={'about'} />
+      <AboutContainer>
+        <AboutContent>
+          <AboutTitle>{localeData.about.title}</AboutTitle>
+          <AboutSubtitle>{localeData.about.subtitle}</AboutSubtitle>
+          <AboutValuedContainer>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.ip}</LabelSide>
+              <ValueSide>{ip}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.browser}</LabelSide>
+              <ValueSide>{browser}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.browserVersion}</LabelSide>
+              <ValueSide>v{browserVersion}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.os}</LabelSide>
+              <ValueSide>{os}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.networkProvider}</LabelSide>
+              <ValueSide>{network}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.timeZone}</LabelSide>
+              <ValueSide>{timezone}</ValueSide>
+            </AboutValuedRow>
+            {latitude && longitude &&
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.location}</LabelSide>
+              <ValueSide href={`https://www.google.com.br/maps/@${latitude},${longitude},16z`} target="_blank">{'Map'}</ValueSide>
+            </AboutValuedRow>}
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.resolution}</LabelSide>
+              <ValueSide>{browserResolution}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.screen}</LabelSide>
+              <ValueSide>{screenResolution}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.language}</LabelSide>
+              <ValueSide>{language}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.cookies}</LabelSide>
+              <ValueSide>{cookies}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.processors}</LabelSide>
+              <ValueSide>{hardware}</ValueSide>
+            </AboutValuedRow>
+            <AboutValuedRow>
+              <LabelSide>{localeData.about.javascript}</LabelSide>
+              <ValueSide>{'✅'}</ValueSide>
+            </AboutValuedRow>
+          </AboutValuedContainer>
+          <AboutFooterWarning dangerouslySetInnerHTML={{ __html: localeData.about.finalWarning }} />
+        </AboutContent>
+      </AboutContainer>
+    </Tile>
   )
 }

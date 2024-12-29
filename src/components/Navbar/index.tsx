@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import GhostMotion from "../GhostMotion";
-import { LocaleSwitcher, LoginButton, Logo, LogoTitle, MenuItem, MenuList, NavContainer, ResponsiveMenu, ResponsiveMenuContent, ResponsiveTrigger, ThemeSwitcher, WidgetSettings } from "./styles";
+import { LocaleSwitcher, Logo, LogoTitle, MenuItem, MenuList, NavContainer, ResponsiveMenu, ResponsiveMenuContent, ResponsiveTrigger, ThemeSwitcher, WidgetSettings } from "./styles";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import getLocale from "@/config/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,7 @@ import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { Sheet } from "../ui/sheet";
 
 interface NavbarProperties {
-  selected?: 'home' | 'about' | 'application' | 'tools' | 'games'
+  selected?: 'home' | 'about' | 'tools' | 'articles'
 }
 
 export default function Navbar({
@@ -27,9 +27,8 @@ export default function Navbar({
       <MenuList off>
         <MenuItem href={'/'} selected={selected === 'home'}>{localeData.menu.home}</MenuItem>
         <MenuItem href={'/about'} selected={selected === 'about'}>{localeData.menu.about}</MenuItem>
-        <MenuItem href={'/application'} selected={selected === 'application'}>{localeData.menu.applications}</MenuItem>
+        <MenuItem href={'/articles'} selected={selected === 'articles'}>{localeData.menu.articles}</MenuItem>
         <MenuItem href={'/tools'} selected={selected === 'tools'}>{localeData.menu.tools}</MenuItem>
-        <MenuItem href={'/games'} selected={selected === 'games'}>{localeData.menu.games}</MenuItem>
       </MenuList>
       <ResponsiveMenu>
         <Sheet>
@@ -42,14 +41,12 @@ export default function Navbar({
                 <FontAwesomeIcon icon={actualTheme === 'light' ? faMoon : faSun} />
               </ThemeSwitcher>
               <LocaleSwitcher onClick={() => switchLocale(locale === 'pt' ? 'en' : 'pt')}>{locale}</LocaleSwitcher>
-              <LoginButton href={'/login'}>login</LoginButton>
             </WidgetSettings>
             <MenuList>
               <MenuItem href={'/'}>{localeData.menu.home}</MenuItem>
               <MenuItem href={'/about'}>{localeData.menu.about}</MenuItem>
-              <MenuItem href={'/application'}>{localeData.menu.applications}</MenuItem>
+              <MenuItem href={'/articles'}>{localeData.menu.articles}</MenuItem>
               <MenuItem href={'/tools'}>{localeData.menu.tools}</MenuItem>
-              <MenuItem href={'/games'}>{localeData.menu.games}</MenuItem>
             </MenuList>
           </ResponsiveMenuContent>
         </Sheet>
@@ -59,7 +56,6 @@ export default function Navbar({
           <FontAwesomeIcon icon={actualTheme === 'light' ? faMoon : faSun} />
         </ThemeSwitcher>
         <LocaleSwitcher onClick={() => switchLocale(locale === 'pt' ? 'en' : 'pt')}>{locale}</LocaleSwitcher>
-        <LoginButton href={'/login'}>login</LoginButton>
       </WidgetSettings>
     </NavContainer>
   )

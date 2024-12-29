@@ -15,6 +15,7 @@ interface ThemeProperties {
     purple: string;
     pink: string;
     yellow: string;
+    darkYellow: string;
     success: string;
     error: string;
     variation: {
@@ -51,6 +52,7 @@ export const darkTheme : ThemeProperties = {
     purple: '#5865F2',
     pink: '#EB459E',
     yellow: '#FEE75C',
+    darkYellow: '#3D3A29',
     success: '#57F287',
     error: '#ED4245',
     variation: {
@@ -87,6 +89,7 @@ export const lightTheme : ThemeProperties = {
     purple: '#5865F2',
     pink: '#EB459E',
     yellow: '#FEE75C',
+    darkYellow: '#3D3A29',
     success: '#57F287',
     error: '#ED4245',
     variation: {

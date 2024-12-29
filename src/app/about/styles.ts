@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AdminContainer = styled.div`
+export const AboutContainer = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8,14 +8,14 @@ export const AdminContainer = styled.div`
   justify-content: center;
 `;
 
-export const AdminContent = styled.div`
+export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
 `;
 
-export const AdminTitle = styled.span`
+export const AboutTitle = styled.span`
   font-family: ${props => props.theme.fonts.spaceMono};
   font-size: 5em;
   font-weight: 700;
@@ -23,15 +23,15 @@ export const AdminTitle = styled.span`
   letter-spacing: 5px;
 `;
 
-export const AdminSubtitle = styled.p`
+export const AboutSubtitle = styled.p`
   font-family: ${props => props.theme.fonts.spaceMono};
   color: ${props => props.theme.color.variation.secondary(.8)};
   text-align: center;
   letter-spacing: 1px;
-  font-size: .8em;
+  font-size: .9em;
 `;
 
-export const AdminValuedContainer = styled.div`
+export const AboutValuedContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 2em;
@@ -40,7 +40,7 @@ export const AdminValuedContainer = styled.div`
   gap: .7em;
 `;
 
-export const AdminValuedRow = styled.div`
+export const AboutValuedRow = styled.div`
   width: 100%;
   display: flex;
   gap: 1em;
@@ -72,5 +72,26 @@ export const ValueSide = styled.a`
 
   @media screen and (max-width: 1100px) {
     font-size: .8em;
+  }
+`;
+
+export const AboutFooterWarning = styled.footer`
+  font-family: ${props => props.theme.fonts.spaceMono};
+  color: ${props => props.theme.color.variation.secondary(.8)};
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: .8em;
+  margin-top: 5em;
+  font-weight: 600;
+
+  i {
+    color: ${props => props.theme.color.yellow};
+    background-color: ${props => props.theme.color.darkYellow};
+    display: flex;
+    margin-top: 2em;
+    padding: 1.5em;
+    border-radius: 12px;
+    text-align: left;
+    border-left: .4em solid ${props => props.theme.color.yellow};
   }
 `;
