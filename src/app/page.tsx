@@ -45,6 +45,7 @@ export default function Home() {
   return (
     <Tile maxWidth={1440} title={`krauzy • ${title}`}>
       <Navbar selected={'home'} />
+      {/* WELCOME */}
       <HomeWelcomeContainer>
         <MessageWelcomeContainer>
           <TooltipProvider>
@@ -66,6 +67,7 @@ export default function Home() {
           <GhostAsset src={'/assets/ghost.svg'} />
         </GhostAssetContainer>
       </HomeWelcomeContainer>
+      {/* INTRO */}
       <IntroContainer>
         <IntroHeader>
           <GhostMotion color="primary" />
@@ -78,6 +80,7 @@ export default function Home() {
           ))}
         </IntroContent>
       </IntroContainer>
+      {/* DONE */}
       <DoneContainer>
         <DoneHeader>
           <GhostMotion color="secondary" />

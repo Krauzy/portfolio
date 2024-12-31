@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BackHomeButton, TileContainer } from "./styles";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 interface TileProperties {
   maxWidth: number;
@@ -11,12 +12,31 @@ interface TileProperties {
 export default function Tile({ 
   maxWidth, 
   title,
-  children } : Readonly<TileProperties>) {
+  children 
+} : Readonly<TileProperties>) {
+  const [disableAnchor, setDisableAnchor] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        setDisableAnchor(window.scrollY === 0);
+      };
+      window.addEventListener('scroll', handleScroll);
+      
+      return () => { window.removeEventListener('scroll', handleScroll); }
+    }
+  }, []);
+
   return (
     <TileContainer maxWidth={maxWidth}>
       <title>{title}</title>
       {children}
-      <BackHomeButton>
+      <BackHomeButton 
+        onClick={() => {
+          setDisableAnchor(true); 
+          scrollTo({ top: 0 })
+        }} 
+        disable={disableAnchor} >
         <FontAwesomeIcon icon={faHouse} />
       </BackHomeButton>
     </TileContainer>
