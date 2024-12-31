@@ -14,7 +14,7 @@ export default function Tile({
   title,
   children 
 } : Readonly<TileProperties>) {
-  const [disableAnchor, setDisableAnchor] = useState(false);
+  const [disableAnchor, setDisableAnchor] = useState(true);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

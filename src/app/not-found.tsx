@@ -79,14 +79,15 @@ export default function NotFound() {
   const localeData = getLocale(locale);
 
   const [screen, setScreen] = useState<{ x: number, y: number} | undefined>();
-  const [arr, setArr] = useState<number[]>([]);
-
+  
   const randomizer = (max: number) => Math.floor(Math.random() * (max + 1));
   
   const generateRandomList = () => {
     return Array.from({ length: 25 }, () => Math.floor(Math.random() * (100 + 1)));
   };
-
+  
+  const [arr, setArr] = useState<number[]>(generateRandomList());
+  
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setScreen({
