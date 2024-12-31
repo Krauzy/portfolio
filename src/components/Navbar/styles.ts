@@ -107,12 +107,12 @@ export const ThemeSwitcher = styled.button`
   align-items: center;
   justify-content: center;
   transition: all .5s ease-in-out;
-  color: ${props => props.theme.color.primary};
+  color: ${props => props.theme.color.secondary};
   font-size: 1em;
 
   &:hover {
     background-color: ${props => props.theme.color.purple};
-    color: ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.white};
   }
 
   @media screen and (max-width: 1100px) {
@@ -131,12 +131,12 @@ export const LocaleSwitcher = styled.button`
   align-items: center;
   justify-content: center;
   transition: all .5s ease-in-out;
-  color: ${props => props.theme.color.primary};
+  color: ${props => props.theme.color.black};
   text-transform: uppercase;
 
   &:hover {
     background-color: ${props => props.theme.color.purple};
-    color: ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.white};
   }
 
   @media screen and (max-width: 1100px) {

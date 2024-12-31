@@ -657,7 +657,7 @@ export const FooterTitle = styled.span`
   font-size: 1.8em;
   font-family: ${props => props.theme.fonts.spaceMono};
   font-weight: 800;
-  color: ${props => props.theme.color.secondary};
+  color: ${props => props.theme.color.white};
   overflow-y: hidden;
 
   @media screen and (max-width: 1100px) {
@@ -684,7 +684,7 @@ export const FooterPhoto = styled.img`
 `;
 
 export const FooterDescription = styled.span`
-  color: ${props => props.theme.color.secondary};
+  color: ${props => props.theme.color.white};
   font-family: ${props => props.theme.fonts.spaceMono};
 
   @media screen and (max-width: 1100px) {
@@ -695,7 +695,7 @@ export const FooterDescription = styled.span`
 
 export const FooterLocationContainer = styled.div`
   display: flex;
-  color: ${props => props.theme.color.secondary};
+  color: ${props => props.theme.color.white};
   align-items: center;
   gap: .6em;
 
@@ -734,7 +734,7 @@ export const FooterSocialContainer = styled.div`
 export const FooterSocialLink = styled.a<{ customColor: string }>`
   font-size: 1.3em;
   background-color: ${props => props.customColor};
-  color: ${props => props.theme.color.secondary};
+  color: ${props => props.theme.color.white};
   display: flex;
   width: 1.8em;
   height: 1.8em;
@@ -747,7 +747,7 @@ export const FooterSocialLink = styled.a<{ customColor: string }>`
 export const Assignment = styled.span`
   font-family: ${props => props.theme.fonts.alexBrush};
   font-size: 2em;
-  color: ${props => props.theme.color.secondary};
+  color: ${props => props.theme.color.white};
   margin-top: 3em;
 `;
 

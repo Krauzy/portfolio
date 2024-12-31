@@ -5,7 +5,8 @@ import Tile from "@/components/Tile";
 import FitMetric from "@/components/tools/fitMetric";
 import MarkdownWriter from "@/components/tools/markdownWriter";
 import WordCounter from "@/components/tools/wordCounter";
-import { useEffect, useState } from "react";
+import { redirect } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 
 interface DataTools {
   tools: {
@@ -22,12 +23,6 @@ export default function Tool({
 
   const [slug, setSlug] = useState<string>("");
 
-  useEffect(() => {
-    params.then(({ slug }) => {
-      setSlug(slug);
-    })
-  }, [params]);
-
   const dataTools: DataTools = {
     tools: [
       {
@@ -43,12 +38,29 @@ export default function Tool({
         render: <FitMetric />
       }
     ]
-  }
+  };
+ 
+  useEffect(() => {
+    params.then(({ slug }) => {
+      setSlug(slug);
+    })
+  }, [params]);
+
+  const renderTool = useMemo(() => {
+    if (slug) {
+      const selectedTool = dataTools.tools.filter(tool => tool.slug === slug)[0];
+  
+      if (selectedTool) {
+        return selectedTool.render;
+      } else redirect('/not-found');
+    }
+  }, [slug]);
+
   
   return (
     <Tile maxWidth={1440} title={`krauzy • ${slug}`}>
       <Navbar selected="tools" />
-      {slug && dataTools.tools.filter(tool => tool.slug === slug)[0].render}
+      {slug && renderTool}
     </Tile>
   )
 }

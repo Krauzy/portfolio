@@ -72,6 +72,7 @@ export const ToolCategoriesTitle = styled.span`
   color: ${props => props.theme.color.variation.secondary(.9)};
   margin-bottom: .5em;
   padding: .5em 1em;
+  font-weight: 600;
 `;
 
 export const ToolCategoryOptionsContainer = styled.div`

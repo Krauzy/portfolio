@@ -415,12 +415,11 @@ export const portugueseData : DataLocale = {
     Essas informações não está aqui pra te assustar nem nada, é apenas uma demonstração de que eu consigo sobre você com 1 clique seu.
     </br>
     Tome sempre muito cuidado onde você entra na internet.
-    </br></br>
-    <i>
-    "Nem toda toca de coelho leva a maravilhas; algumas escondem abismos dos quais é difícil escapar."
+    `,
+    quotes: `
+     "Nem toda toca de coelho leva a maravilhas; algumas escondem abismos dos quais é difícil escapar."
     </br></br>
     - Alice no País das Maravilhas
-    </i>
     `,
     ip: 'IP',
     browser: 'Navegador',
@@ -438,6 +437,9 @@ export const portugueseData : DataLocale = {
     silverLight: 'Silverlight',
     flash: 'Flash',
     adBlocker: 'Ad-Block'
+  },
+  notFound: {
+    backButton: 'Voltar ao Início'
   }
 }
 

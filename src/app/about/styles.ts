@@ -13,6 +13,11 @@ export const AboutContent = styled.div`
   flex-direction: column;
   align-items: center;
   width: 80%;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin-top: 20em;
+  }
 `;
 
 export const AboutTitle = styled.span`
@@ -21,6 +26,10 @@ export const AboutTitle = styled.span`
   font-weight: 700;
   color: ${props => props.theme.color.purple};
   letter-spacing: 5px;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 3.5em;
+  }
 `;
 
 export const AboutSubtitle = styled.p`
@@ -29,6 +38,11 @@ export const AboutSubtitle = styled.p`
   text-align: center;
   letter-spacing: 1px;
   font-size: .9em;
+
+  @media screen and (max-width: 1100px) {
+    font-size: .8em;
+    width: 90%;
+  }
 `;
 
 export const AboutValuedContainer = styled.div`
@@ -75,23 +89,46 @@ export const ValueSide = styled.a`
   }
 `;
 
-export const AboutFooterWarning = styled.footer`
+export const AboutFooter = styled.footer`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+`;
+
+export const AboutFooterWarning = styled.p`
   font-family: ${props => props.theme.fonts.spaceMono};
   color: ${props => props.theme.color.variation.secondary(.8)};
   text-align: center;
   letter-spacing: 1px;
   font-size: .8em;
   margin-top: 5em;
-  font-weight: 600;
+  width: 100%;
 
-  i {
-    color: ${props => props.theme.color.yellow};
-    background-color: ${props => props.theme.color.darkYellow};
-    display: flex;
-    margin-top: 2em;
-    padding: 1.5em;
-    border-radius: 12px;
-    text-align: left;
-    border-left: .4em solid ${props => props.theme.color.yellow};
+  @media screen and (max-width: 1100px) {
+    width: 90%;
+    font-size: .7em;
+  }
+`;
+
+export const AboutFooterQuotes = styled.span<{ "is-dark"?: boolean }>`
+  font-family: ${props => props.theme.fonts.spaceMono};
+  color: ${props => props['is-dark'] ? props.theme.color.yellow : props.theme.color.black};
+  background-color: ${props => props.theme.color.darkYellow};
+  display: flex;
+  margin-top: 2em;
+  padding: 1.5em;
+  border-radius: 12px;
+  text-align: left;
+  border-left: .4em solid ${props => props['is-dark'] ? props.theme.color.yellow : props.theme.color.black};
+  width: fit-content;
+  font-size: .9em;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    font-size: .85em;
   }
 `;

@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext, useEffect, useState } from "react";
-import { AboutFooterWarning, AboutContainer, AboutContent, AboutSubtitle, AboutTitle, AboutValuedContainer, AboutValuedRow, LabelSide, ValueSide } from "./styles";
+import { AboutFooterWarning, AboutContainer, AboutContent, AboutSubtitle, AboutTitle, AboutValuedContainer, AboutValuedRow, LabelSide, ValueSide, AboutFooter, AboutFooterQuotes } from "./styles";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import getLocale from "@/config/data";
 import Tile from "@/components/Tile";
@@ -12,7 +12,7 @@ interface NetworkInformation {
 }
 
 export default function About() {
-  const { locale } = useContext(ThemeContext);
+  const { locale, actualTheme } = useContext(ThemeContext);
   const localeData = getLocale(locale);
   const title = localeData.menu.about;
 
@@ -213,7 +213,10 @@ export default function About() {
               <ValueSide>{'✅'}</ValueSide>
             </AboutValuedRow>
           </AboutValuedContainer>
-          <AboutFooterWarning dangerouslySetInnerHTML={{ __html: localeData.about.finalWarning }} />
+          <AboutFooter>
+            <AboutFooterWarning dangerouslySetInnerHTML={{ __html: localeData.about.finalWarning }} />
+            <AboutFooterQuotes dangerouslySetInnerHTML={{ __html: localeData.about.quotes }} is-dark={actualTheme === 'dark'} />
+          </AboutFooter>
         </AboutContent>
       </AboutContainer>
     </Tile>

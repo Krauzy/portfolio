@@ -18,6 +18,8 @@ interface ThemeProperties {
     darkYellow: string;
     success: string;
     error: string;
+    black: string;
+    white: string;
     variation: {
       primary: (opacity: number) => string;
       secondary: (opacity: number) => string;
@@ -55,10 +57,12 @@ export const darkTheme : ThemeProperties = {
     darkYellow: '#3D3A29',
     success: '#57F287',
     error: '#ED4245',
+    black: '#212121',
+    white: '#FFFFFF',
     variation: {
-      primary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`,
-      secondary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`,
-      purple: (opacity: number) => `rgba(88, 101, 242, ${opacity})`
+      primary: (opacity?: number) => `rgba(21, 21, 21, ${opacity ?? 1})`,
+      secondary: (opacity?: number) => `rgba(255, 255, 255, ${opacity ?? 1})`,
+      purple: (opacity?: number) => `rgba(88, 101, 242, ${opacity ?? 1})`
     }
   },
   widget: {
@@ -89,9 +93,11 @@ export const lightTheme : ThemeProperties = {
     purple: '#5865F2',
     pink: '#EB459E',
     yellow: '#FEE75C',
-    darkYellow: '#3D3A29',
+    darkYellow: '#FFF9D7',
     success: '#57F287',
     error: '#ED4245',
+    black: '#212121',
+    white: '#FFFFFF',
     variation: {
       primary: (opacity: number) => `rgba(255, 255, 255, ${opacity})`,
       secondary: (opacity: number) => `rgba(21, 21, 21, ${opacity})`,

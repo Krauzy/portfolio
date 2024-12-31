@@ -103,6 +103,7 @@ export default interface DataLocale {
     title: string;
     subtitle: string;
     finalWarning: string;
+    quotes: string;
     ip: string;
     browser: string;
     browserVersion: string;
@@ -119,5 +120,8 @@ export default interface DataLocale {
     silverLight: string;
     flash: string;
     adBlocker: string;
+  },
+  notFound: {
+    backButton: string;
   }
 }

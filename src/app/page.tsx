@@ -171,7 +171,7 @@ export default function Home() {
       <FooterContainer>
         <FooterSideLeft>
           <FooterHeader>
-            <GhostMotion color="secondary" />
+            <GhostMotion color="white" />
             <FooterTitle>{localeData.resume.footer.title}</FooterTitle>
           </FooterHeader>
           <FooterDescription>{localeData.resume.footer.description}</FooterDescription>

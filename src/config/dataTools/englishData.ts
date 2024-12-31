@@ -414,12 +414,11 @@ export const englishData : DataLocale = {
     This information is not here to scare you or anything, it's just a demonstration of what I can get about you with 1 click of your mouse.
     </br>
     Always be very careful where you go on the internet.
-    </br></br>
-    <i>
+    `,
+    quotes: `
     "Not all rabbit holes lead to wonders; some hide abysses from which it is difficult to escape."
     </br></br>
     - Alice in Wonderland
-    </i>
     `,
     ip: 'IP',
     browser: 'Browser',
@@ -437,6 +436,9 @@ export const englishData : DataLocale = {
     silverLight: 'Silverlight',
     flash: 'Flash',
     adBlocker: 'Ad-Block'
+  },
+  notFound: {
+    backButton: 'Back to Home'
   }
 }
 

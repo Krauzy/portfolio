@@ -7,6 +7,7 @@ import { ThemeContext } from "@/contexts/ThemeContext";
 import { useContext, useState } from "react";
 import { ToolCategoriesContainer, ToolCategoriesTitle, ToolCategory, ToolCategoryOptionsContainer, ToolContainer, ToolContent, ToolDescription, ToolHeader, ToolListContainer, ToolTitle, ToolWidget, ToolWidgetAnchor, ToolWidgetContent, ToolWidgetDate, ToolWidgetFooter, ToolWidgetOverhaul, ToolWidgetTitle } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CardTool from "@/components/CardTool";
 
 export default function Tools() {
   const { locale } = useContext(ThemeContext)
@@ -40,18 +41,19 @@ export default function Tools() {
           </ToolCategoriesContainer>
           <ToolListContainer>
             {localeData.tools.categoryTools.filter(tool => selectedCategory === 0 || tool.categories.includes(selectedCategory)).map(tool => (
-              <ToolWidget key={tool.title} href={tool.link}>
-                <ToolWidgetOverhaul backgroundColor={tool.backgroundColor} foreColor={tool.foreColor}>
-                  <FontAwesomeIcon icon={tool.icon} />
-                </ToolWidgetOverhaul>
-                <ToolWidgetContent>
-                  <ToolWidgetTitle>{tool.title}</ToolWidgetTitle>
-                  <ToolWidgetFooter>
-                    <ToolWidgetDate>{`${daysLeft(tool.date)} ${localeData.tools.dateDescription}`}</ToolWidgetDate>
-                    <ToolWidgetAnchor>{localeData.tools.anchorDescription} →</ToolWidgetAnchor>
-                  </ToolWidgetFooter>
-                </ToolWidgetContent>
-              </ToolWidget>
+              <CardTool key={tool.title} {...tool} />
+              // <ToolWidget key={tool.title} href={tool.link}>
+              //   <ToolWidgetOverhaul backgroundColor={tool.backgroundColor} foreColor={tool.foreColor}>
+              //     <FontAwesomeIcon icon={tool.icon} />
+              //   </ToolWidgetOverhaul>
+              //   <ToolWidgetContent>
+              //     <ToolWidgetTitle>{tool.title}</ToolWidgetTitle>
+              //     <ToolWidgetFooter>
+              //       <ToolWidgetDate>{`${daysLeft(tool.date)} ${localeData.tools.dateDescription}`}</ToolWidgetDate>
+              //       <ToolWidgetAnchor>{localeData.tools.anchorDescription} →</ToolWidgetAnchor>
+              //     </ToolWidgetFooter>
+              //   </ToolWidgetContent>
+              // </ToolWidget>
             ))}
           </ToolListContainer>
         </ToolContent>
