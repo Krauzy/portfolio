@@ -4,6 +4,9 @@ Frontend-only software engineering portfolio built with Next.js App Router, Type
 
 The visual direction is a dark premium SaaS/cybersecurity interface with blue radial glows, translucent cards, original SVG assets and editable static data.
 
+<img width="1521" height="1191" alt="image" src="https://github.com/user-attachments/assets/91f05448-8ce3-4548-9073-0582d4b0923c" />
+
+
 ## Stack
 
 - Next.js App Router
