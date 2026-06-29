@@ -28,6 +28,15 @@ export const metadata: Metadata = {
   title: `${profileMeta.name} | ${profileMeta.role}`,
   description: profileMeta.summary,
   metadataBase: new URL("https://portfolio.local"),
+  icons: {
+    icon: [
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml"
+      }
+    ],
+    shortcut: "/icon.svg"
+  },
   openGraph: {
     title: `${profileMeta.name} | ${profileMeta.role}`,
     description: profileMeta.summary,
