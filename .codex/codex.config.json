@@ -1,0 +1,58 @@
+{
+  "project": "skyfort-inspired-developer-portfolio",
+  "type": "frontend-only",
+  "runtime": "node",
+  "framework": "nextjs-app-router",
+  "language": "typescript",
+  "styling": "tailwindcss",
+  "iconLibrary": "fontawesome",
+  "constraints": {
+    "backend": false,
+    "database": false,
+    "apiRoutes": "avoid-functional-api-routes",
+    "externalImages": false,
+    "copyReferenceDesign": false,
+    "hardcodedContentInComponents": false
+  },
+  "qualityGates": [
+    "npm run lint",
+    "npm run build"
+  ],
+  "directories": {
+    "sections": "src/components/sections",
+    "ui": "src/components/ui",
+    "data": "src/data",
+    "svgAssets": "src/assets/svg",
+    "lib": "src/lib"
+  },
+  "designTokens": {
+    "colors": {
+      "background": "#020207",
+      "surfaceDeep": "#080A1A",
+      "surface": "#111338",
+      "indigo900": "#0C11A2",
+      "indigo700": "#141BD4",
+      "blueMuted": "#4D5DB3",
+      "textPrimary": "#F4F7FF",
+      "textSecondary": "#B9C3D6",
+      "textMuted": "#7B8197",
+      "accentWarm": "#B16258"
+    },
+    "visualStyle": [
+      "dark-premium",
+      "cybersecurity-saas",
+      "glassmorphism-cards",
+      "radial-blue-glows",
+      "abstract-cloud-security-assets"
+    ]
+  },
+  "doneWhen": [
+    "Landing page implemented",
+    "Responsive layout completed",
+    "Profile/project data centralized",
+    "Custom SVG assets created",
+    "FontAwesome configured",
+    "README included",
+    "Build passes"
+  ]
+}

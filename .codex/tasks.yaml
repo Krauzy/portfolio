@@ -1,0 +1,61 @@
+project: skyfort-inspired-developer-portfolio
+mode: frontend-only
+
+phases:
+  - name: bootstrap
+    tasks:
+      - Create or verify Next.js App Router project with TypeScript.
+      - Install and configure Tailwind CSS.
+      - Install FontAwesome packages needed for brand and solid icons.
+      - Configure src alias if not already available.
+
+  - name: design-system
+    tasks:
+      - Extend Tailwind theme with the dark cyber palette.
+      - Add reusable utilities for radial backgrounds, glass cards and grid overlays.
+      - Configure next/font with body and heading fonts.
+      - Create cn utility.
+
+  - name: data-layer
+    tasks:
+      - Create profile data file.
+      - Create skills data file grouped by categories.
+      - Create projects data file with stack and links.
+      - Create experience data file with timeline entries.
+
+  - name: assets
+    agent: assets
+    tasks:
+      - Create original SVG/TSX hero visual.
+      - Create architecture diagram asset.
+      - Create dashboard/terminal decorative assets.
+      - Ensure all decorative assets use aria-hidden.
+
+  - name: sections
+    agent: frontend
+    tasks:
+      - Implement Navbar.
+      - Implement HeroSection.
+      - Implement TechStrip.
+      - Implement AboutSection.
+      - Implement SkillsSection.
+      - Implement ProjectsSection.
+      - Implement ExperienceSection.
+      - Implement ArchitectureSection.
+      - Implement ContactSection.
+      - Implement Footer.
+
+  - name: polish
+    tasks:
+      - Add responsive spacing and layout refinements.
+      - Add focus-visible states.
+      - Add hover states and subtle transitions.
+      - Check contrast.
+      - Remove unused code.
+
+  - name: validation
+    tasks:
+      - Run npm run lint.
+      - Run npm run build.
+      - Fix all errors.
+      - Update README with install, dev, build and deploy instructions.
