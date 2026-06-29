@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  min-height: 100vh;
+  background: #020207;
+  color: #f4f7ff;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: rgba(77, 93, 179, 0.55);
+  color: #f4f7ff;
+}
+
+@layer utilities {
+  .glass-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.025)
+    );
+    box-shadow:
+      0 24px 80px rgba(20, 27, 212, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(22px);
+  }
+
+  .asset-panel {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+      radial-gradient(circle at 50% 40%, rgba(20, 27, 212, 0.16), transparent 58%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+    box-shadow:
+      0 24px 80px rgba(20, 27, 212, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(22px);
+    transition:
+      transform 420ms ease,
+      border-color 420ms ease,
+      box-shadow 420ms ease;
+  }
+
+  .asset-panel:hover {
+    border-color: rgba(77, 93, 179, 0.46);
+    box-shadow:
+      0 28px 90px rgba(20, 27, 212, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes orbit-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.62;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slide-on-scroll {
+    transform: translate3d(var(--scroll-x, 0), var(--scroll-y, 0), 0)
+      rotate(var(--scroll-rotate, 0deg));
+    will-change: transform;
+  }
+
+  .svg-orbit {
+    animation: orbit-slow 34s linear infinite;
+    transform-box: view-box;
+    transform-origin: center;
+  }
+
+  .svg-pulse {
+    animation: pulse-soft 4.8s ease-in-out infinite;
+  }
+
+  .svg-line-flow {
+    animation: dash-flow 8s linear infinite;
+    stroke-dasharray: 10 18;
+  }
+
+  .svg-node-pulse {
+    animation: pulse-soft 5.6s ease-in-out infinite;
+  }
+
+  .svg-code-scan {
+    animation: pulse-soft 3.4s ease-in-out infinite;
+  }
+
+  .svg-radar-sweep {
+    animation: radar-sweep 5.5s linear infinite;
+    transform-box: view-box;
+    transform-origin: 160px 160px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

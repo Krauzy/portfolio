@@ -1,23 +1,73 @@
-# SkyFort-inspired Portfolio Agent Pack
+# Caio Kraut Portfolio
 
-Este pacote contém arquivos para orientar o Codex na criação de um portfolio frontend em Next.js inspirado na estética SaaS/cybersecurity do design SkyFort no Dribbble.
+Frontend-only software engineering portfolio built with Next.js App Router, TypeScript, Tailwind CSS and FontAwesome.
 
-## Arquivos
+The visual direction is a dark premium SaaS/cybersecurity interface with blue radial glows, translucent cards, original SVG assets and editable static data.
 
-- `PROMPT.md` — prompt principal para criação do projeto.
-- `AGENTS.md` — regras globais para agentes/codex.
-- `.codex/agents/frontend.agent.md` — instruções específicas para implementação frontend.
-- `.codex/agents/assets.agent.md` — instruções específicas para criação de assets visuais.
-- `.codex/codex.config.json` — configuração declarativa do projeto.
-- `.codex/tasks.yaml` — fases e tarefas recomendadas.
+## Stack
 
-## Como usar
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- FontAwesome
+- Static data in `src/data`
+- Original SVG/TSX assets in `src/assets/svg`
+- Local PT/EN internationalization
 
-1. Copie o conteúdo de `PROMPT_AGENTE_PORTFOLIO_NEXTJS.md` para o Codex.
-2. Adicione `AGENTS.md` na raiz do repositório do projeto.
-3. Copie a pasta `.codex` para a raiz se quiser manter os perfis de agente e tarefas.
-4. Peça ao Codex para implementar o projeto seguindo os quality gates.
+## Getting Started
 
-## Observação legal/design
+Install dependencies:
 
-A referência deve ser usada apenas como direção estética. Não copie imagens, textos, layout exato ou composição proprietária do shot original.
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Quality Checks
+
+Run lint:
+
+```bash
+npm run lint
+```
+
+Run a production build:
+
+```bash
+npm run build
+```
+
+## Editing Content
+
+Update profile, skills, project and experience content in:
+
+- `src/data/profile.ts`
+- `src/data/projects.ts`
+- `src/data/skills.ts`
+- `src/data/experience.ts`
+- `src/data/i18n.ts`
+
+Project cards are based on public repositories from the `Krauzy` GitHub profile.
+
+## Deploy
+
+This project is ready for deployment on Vercel. A GitHub Actions workflow is included at `.github/workflows/vercel-deploy.yml`.
+
+Configure these GitHub repository secrets before using the workflow:
+
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
+
+The workflow runs on pushes to `main` and can also be triggered manually from GitHub Actions.
+
+## Design Note
+
+The reference is used only as broad aesthetic direction. No proprietary images, copied composition or backend functionality are included.
