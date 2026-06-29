@@ -3,10 +3,10 @@ export const projectsByLocale = {
     {
       name: "order-flow-platform",
       description:
-        "Estudo de arquitetura de plataforma e solucoes cloud para fluxo de pedidos.",
+        "Estudo de arquitetura de plataforma e soluções cloud para fluxo de pedidos.",
       stack: ["Java", "Spring Boot", "Arquitetura cloud", "API Gateway", "Terraform"],
       impact:
-        "Demonstra desenho de servicos, contratos de API, seguranca e caminhos de deploy para uma plataforma distribuida.",
+        "Demonstra desenho de serviços, contratos de API, segurança e caminhos de deploy para uma plataforma distribuída.",
       links: [
         { label: "GitHub", href: "https://github.com/Krauzy/order-flow-platform" }
       ]
@@ -14,19 +14,19 @@ export const projectsByLocale = {
     {
       name: "noizy",
       description:
-        "Plataforma fullstack de streaming de musica com workflows inspirados em produtos reais, sem usar marcas ou assets protegidos.",
+        "Plataforma fullstack de streaming de música com workflows inspirados em produtos reais, sem usar marcas ou assets protegidos.",
       stack: ["Kotlin", "Angular", "Kafka", "Eventos", "Streaming"],
       impact:
-        "Evidencia arquitetura de produto, eventos, dominios de streaming, backend Kotlin e integracoes orientadas a mensagens.",
+        "Evidencia arquitetura de produto, eventos, domínios de streaming, backend Kotlin e integrações orientadas a mensagens.",
       links: [{ label: "GitHub", href: "https://github.com/Krauzy/noizy" }]
     },
     {
       name: "mt-rabbit",
       description:
-        "Exemplo de publicacao e consumo de filas e exchanges com RabbitMQ e MassTransit.",
+        "Exemplo de publicação e consumo de filas e exchanges com RabbitMQ e MassTransit.",
       stack: ["C#", ".NET", "RabbitMQ", "MassTransit", "Mensageria"],
       impact:
-        "Foca em mensageria, produtores, consumidores, exchanges e padroes de comunicacao assincrona.",
+        "Foca em mensageria, produtores, consumidores, exchanges e padrões de comunicação assíncrona.",
       links: [{ label: "GitHub", href: "https://github.com/Krauzy/mt-rabbit" }]
     },
     {
@@ -35,7 +35,7 @@ export const projectsByLocale = {
         "Projeto web e mobile usando Java Spring Boot, Java Android, PostgreSQL e APIs REST.",
       stack: ["Java", "Spring Boot", "REST API", "PostgreSQL", "Android"],
       impact:
-        "Mostra integracao entre backend, mobile, persistencia relacional e exposicao de APIs para produto multiplataforma.",
+        "Mostra integração entre backend, mobile, persistência relacional e exposição de APIs para produto multiplataforma.",
       links: [{ label: "GitHub", href: "https://github.com/Krauzy/Warn" }]
     }
   ],

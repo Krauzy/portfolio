@@ -16,35 +16,35 @@ export const profileByLocale = {
   pt: {
     ...profileMeta,
     accessibility: {
-      primaryNavigation: "Navegacao principal",
-      home: "Inicio",
+      primaryNavigation: "Navegação principal",
+      home: "Início",
       techStack: "Stack de tecnologias"
     },
     navItems: [
       { label: "Sobre", href: "#sobre" },
-      { label: "Competencias", href: "#skills" },
+      { label: "Competências", href: "#skills" },
       { label: "Projetos", href: "#projetos" },
-      { label: "Experiencia", href: "#experiencia" },
+      { label: "Experiência", href: "#experiencia" },
       { label: "Contato", href: "#contato" }
     ],
     hero: {
       eyebrow: "Portfolio / Arquitetura de Software",
       title:
-        "Ola, eu sou Caio Kraut. Projeto arquiteturas seguras para backend, cloud e solucoes digitais.",
+        "Olá, eu sou Caio Kraut. Projeto arquiteturas seguras para backend, cloud e soluções digitais.",
       description:
-        "Atuo na construcao de plataformas backend, arquiteturas orientadas a eventos, sistemas cloud-native e solucoes escalaveis com Java, Kotlin, TypeScript, AWS e boas praticas de engenharia.",
+        "Atuo na construção de plataformas backend, arquiteturas orientadas a eventos, sistemas cloud-native e soluções escaláveis com Java, Kotlin, TypeScript, AWS e boas práticas de engenharia.",
       primaryCta: { label: "Ver projetos", href: "#projetos" },
       secondaryCta: { label: "Entrar em contato", href: "mailto:your.email@example.com" },
       signal: {
         label: "Sinal",
         value: "99.9",
-        detail: "Mentalidade de confiabilidade aplicada a arquitetura, backend e cloud."
+        detail: "Mentalidade de confiabilidade aplicada à arquitetura, backend e cloud."
       }
     },
     metrics: [
       { label: "Foco de engenharia", value: "Arquitetura", detail: "Cloud, API, Security" },
-      { label: "Stacks principais", value: "6+", detail: "Backend, cloud, solucoes" },
-      { label: "Modo arquitetural", value: "EDA", detail: "Eventos, servicos, dados" }
+      { label: "Stacks principais", value: "6+", detail: "Backend, cloud, soluções" },
+      { label: "Modo arquitetural", value: "EDA", detail: "Eventos, serviços, dados" }
     ],
     techStack: [
       "Java",
@@ -62,14 +62,14 @@ export const profileByLocale = {
     ],
     about: {
       eyebrow: "Perfil de engenharia",
-      title: "Arquitetura, backend e cloud com foco em produtos escalaveis.",
+      title: "Arquitetura, backend e cloud com foco em produtos escaláveis.",
       description:
-        "Meu trabalho conecta decisao arquitetural e execucao: definicao de dominios, contratos de API, integracoes assincronas, infraestrutura cloud e operacao confiavel.",
+        "Meu trabalho conecta decisão arquitetural e execução: definição de domínios, contratos de API, integrações assíncronas, infraestrutura cloud e operação confiável.",
       specialties: [
         {
           title: "Arquitetura backend",
           description:
-            "Bounded contexts, contratos REST, modelagem de dominio e servicos sustentaveis.",
+            "Bounded contexts, contratos REST, modelagem de domínio e serviços sustentáveis.",
           icon: "server" as IconKey
         },
         {
@@ -81,45 +81,45 @@ export const profileByLocale = {
         {
           title: "Arquitetura event-driven",
           description:
-            "Filas, brokers, eventos de dominio, idempotencia, retries e consumidores assincronos.",
+            "Filas, brokers, eventos de domínio, idempotência, retries e consumidores assíncronos.",
           icon: "network" as IconKey
         },
         {
-          title: "Arquitetura de solucoes",
+          title: "Arquitetura de soluções",
           description:
-            "Desenho de tradeoffs entre produto, seguranca, escala, custos e evolucao tecnica.",
+            "Desenho de tradeoffs entre produto, segurança, escala, custos e evolução técnica.",
           icon: "diagram" as IconKey
         }
       ]
     },
     sections: {
       skills: {
-        eyebrow: "Matriz de competencias",
-        title: "Capacidades organizadas por arquitetura e operacao.",
+        eyebrow: "Matriz de competências",
+        title: "Capacidades organizadas por arquitetura e operação.",
         description:
-          "Um mapa pratico das tecnologias, padroes e disciplinas que uso para transformar requisitos em plataformas confiaveis."
+          "Um mapa prático das tecnologias, padrões e disciplinas que uso para transformar requisitos em plataformas confiáveis."
       },
       projects: {
         eyebrow: "Projetos em destaque",
         cardLabel: "Projeto",
-        statusLabel: "Repositorio",
+        statusLabel: "Repositório",
         title: "Projetos reais do GitHub com sinais de arquitetura e backend.",
         description:
-          "Entradas baseadas em repositorios publicos reais, com foco em cloud, backend, mensageria, APIs e desenho de solucoes."
+          "Entradas baseadas em repositórios públicos reais, com foco em cloud, backend, mensageria, APIs e desenho de soluções."
       },
       experience: {
-        eyebrow: "Trajetoria tecnica",
-        title: "Experiencia orientada a impacto tecnico e arquitetura.",
+        eyebrow: "Trajetória técnica",
+        title: "Experiência orientada a impacto técnico e arquitetura.",
         description:
-          "Use esta secao para detalhar resultados, decisoes arquiteturais, lideranca tecnica e operacao de sistemas."
+          "Esta seção resume os focos de atuação, destacando arquitetura de software, backend, cloud, sistemas distribuídos e decisões técnicas por fase da trajetória."
       }
     },
     architecture: {
       eyebrow: "Caso de arquitetura",
-      title: "Caso event-driven: processamento de pedidos com eventos de dominio.",
+      title: "Caso event-driven: processamento de pedidos com eventos de domínio.",
       diagramLabel: "Diagrama visual de arquitetura orientada a eventos",
       description:
-        "Representacao visual de um fluxo em que comandos entram pela API, servicos publicam eventos, consumidores processam integracoes assincronas e modelos de leitura mantem consultas rapidas e observaveis.",
+        "Representação visual de um fluxo em que comandos entram pela API, serviços publicam eventos, consumidores processam integrações assíncronas e modelos de leitura mantêm consultas rápidas e observáveis.",
       cta: { label: "Discutir arquitetura", href: "#contato" },
       nodes: [
         { label: "Client Apps", tone: "primary" },
@@ -134,13 +134,13 @@ export const profileByLocale = {
       eyebrow: "Contato",
       title: "Tem um desafio de arquitetura, backend ou cloud?",
       description:
-        "Entre em contato para discutir arquitetura de software, sistemas backend, plataformas cloud-native ou desenho de solucoes.",
+        "Entre em contato para discutir arquitetura de software, sistemas backend, plataformas cloud-native ou desenho de soluções.",
       primaryCta: { label: "Enviar email", href: "mailto:your.email@example.com" },
       secondaryCta: { label: "Ver GitHub", href: "https://www.github.com/Krauzy" }
     },
     footer: {
-      note: "Construido com Next.js, TypeScript e Tailwind CSS.",
-      credits: "Portfolio com i18n local e conteudo editavel."
+      note: "Construído com Next.js, TypeScript e Tailwind CSS.",
+      credits: "Portfolio com i18n local e conteúdo editável."
     },
     language: {
       label: "Alterar idioma",

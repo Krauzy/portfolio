@@ -5,7 +5,7 @@ export const skillsByLocale = {
     {
       category: "Arquitetura",
       icon: "diagram" as IconKey,
-      items: ["Domain-driven design", "Desenho de solucoes", "Tradeoffs", "Security by design"]
+      items: ["Domain-driven design", "Desenho de soluções", "Tradeoffs", "Security by design"]
     },
     {
       category: "Backend",
@@ -25,12 +25,12 @@ export const skillsByLocale = {
     {
       category: "Observabilidade",
       icon: "eye" as IconKey,
-      items: ["Metricas", "Traces", "Logs", "SLOs", "Revisao de incidentes"]
+      items: ["Métricas", "Traces", "Logs", "SLOs", "Revisão de incidentes"]
     },
     {
       category: "Qualidade de engenharia",
       icon: "shield" as IconKey,
-      items: ["Estrategia de testes", "Contratos de API", "Confiabilidade", "Manutenibilidade"]
+      items: ["Estratégia de testes", "Contratos de API", "Confiabilidade", "Manutenibilidade"]
     }
   ],
   en: [

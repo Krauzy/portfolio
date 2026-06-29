@@ -5,11 +5,11 @@ export const experienceByLocale = {
       company: "Backend, Cloud & Architecture",
       period: "Atual",
       summary:
-        "Atuacao focada em arquitetura de software, sistemas backend e plataformas cloud-native com enfase em confiabilidade e evolucao sustentavel.",
+        "Atuação focada em arquitetura de software, sistemas backend e plataformas cloud-native com ênfase em confiabilidade e evolução sustentável.",
       highlights: [
-        "Desenho de contratos, limites de dominio e integracoes entre servicos.",
+        "Desenho de contratos, limites de domínio e integrações entre serviços.",
         "Arquiteturas orientadas a eventos com filas, brokers, consumidores e modelos de leitura.",
-        "Decisoes tecnicas alinhadas a seguranca, escala, custos e operacao."
+        "Decisões técnicas alinhadas à segurança, escala, custos e operação."
       ]
     },
     {
@@ -17,11 +17,11 @@ export const experienceByLocale = {
       company: "Distributed Systems",
       period: "Anterior",
       summary:
-        "Construcao de APIs, servicos e integracoes usando Java/Kotlin, Spring Boot, mensageria e persistencia relacional.",
+        "Construção de APIs, serviços e integrações usando Java/Kotlin, Spring Boot, mensageria e persistência relacional.",
       highlights: [
-        "Fluxos resilientes com idempotencia, retries e comunicacao assincrona.",
-        "Evolucao de bases de codigo com testes, observabilidade e padroes simples.",
-        "Colaboracao entre produto e engenharia para transformar requisitos em entregas claras."
+        "Fluxos resilientes com idempotência, retries e comunicação assíncrona.",
+        "Evolução de bases de código com testes, observabilidade e padrões simples.",
+        "Colaboração entre produto e engenharia para transformar requisitos em entregas claras."
       ]
     },
     {
@@ -29,11 +29,11 @@ export const experienceByLocale = {
       company: "Cloud Platforms",
       period: "Base",
       summary:
-        "Definicao de solucoes com foco em cloud, APIs, dados, seguranca e operacao de plataformas.",
+        "Definição de soluções com foco em cloud, APIs, dados, segurança e operação de plataformas.",
       highlights: [
-        "Mapeamento de requisitos em componentes, integracoes e responsabilidades.",
-        "Escolha pragmatica de tecnologias conforme risco, maturidade e custo.",
-        "Documentacao de decisoes arquiteturais e tradeoffs para evolucao do sistema."
+        "Mapeamento de requisitos em componentes, integrações e responsabilidades.",
+        "Escolha pragmática de tecnologias conforme risco, maturidade e custo.",
+        "Documentação de decisões arquiteturais e tradeoffs para evolução do sistema."
       ]
     }
   ],

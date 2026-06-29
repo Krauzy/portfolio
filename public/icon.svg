@@ -1,0 +1,18 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="96" height="96" rx="22" fill="#020207"/>
+  <rect x="1" y="1" width="94" height="94" rx="21" stroke="#4D5DB3" stroke-opacity="0.42" stroke-width="2"/>
+  <path d="M48 14L76 29.5V60.5L48 82L20 60.5V29.5L48 14Z" fill="url(#core)" fill-opacity="0.28" stroke="#4D5DB3" stroke-width="2.5"/>
+  <path d="M34 61V35H44.4C53.4 35 59.8 40.2 59.8 48C59.8 55.8 53.4 61 44.4 61H34ZM41.2 54.8H44C49.2 54.8 52.4 52.2 52.4 48C52.4 43.8 49.2 41.2 44 41.2H41.2V54.8Z" fill="#F4F7FF"/>
+  <path d="M57 61V35H64.2V46.2L73.8 35H82L71 47.4L82.7 61H74.1L64.2 49.2V61H57Z" fill="#F4F7FF"/>
+  <circle cx="24" cy="30" r="2.7" fill="#B16258"/>
+  <circle cx="72" cy="30" r="2.7" fill="#4D5DB3"/>
+  <circle cx="48" cy="82" r="2.7" fill="#141BD4"/>
+  <path d="M24 30L48 14L72 30" stroke="#4D5DB3" stroke-opacity="0.55" stroke-width="1.5"/>
+  <path d="M24 30V60.5L48 82L72 60.5V30" stroke="#141BD4" stroke-opacity="0.35" stroke-width="1.5"/>
+  <defs>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48 45) rotate(90) scale(42)">
+      <stop stop-color="#2530FF"/>
+      <stop offset="1" stop-color="#020207" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
